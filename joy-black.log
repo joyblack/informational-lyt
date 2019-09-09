@@ -30,3 +30,942 @@
 2019-09-09 15:29:43.475  INFO 12532 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@380628{HTTP/1.1,[http/1.1]}{0.0.0.0:8090}
 2019-09-09 15:29:43.478  INFO 12532 --- [main] o.s.b.web.embedded.jetty.JettyWebServer  : Jetty started on port(s) 8090 (http/1.1) with context path '/informational-lyt/v1'
 2019-09-09 15:29:43.479  INFO 12532 --- [main] c.j.x.i.InformationalLytApplication      : Started InformationalLytApplication in 5.348 seconds (JVM running for 6.079)
+2019-09-09 15:34:57.823  INFO 3344 --- [main] c.j.x.i.InformationalLytApplication      : Starting InformationalLytApplication on DESKTOP-C3BJLCD with PID 3344 (D:\github\informational-lyt\target\classes started by Administrator in D:\github\informational-lyt)
+2019-09-09 15:34:57.826  INFO 3344 --- [main] c.j.x.i.InformationalLytApplication      : No active profile set, falling back to default profiles: default
+2019-09-09 15:34:58.500  INFO 3344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-09 15:34:58.594  INFO 3344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86ms. Found 7 repository interfaces.
+2019-09-09 15:34:58.906  INFO 3344 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$eb610640] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-09 15:34:59.164  INFO 3344 --- [main] org.eclipse.jetty.util.log               : Logging initialized @2959ms to org.eclipse.jetty.util.log.Slf4jLog
+2019-09-09 15:34:59.227  INFO 3344 --- [main] o.s.b.w.e.j.JettyServletWebServerFactory : Server initialized with port: 8090
+2019-09-09 15:34:59.228  INFO 3344 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.19.v20190610; built: 2019-06-10T16:30:51.723Z; git: afcf563148970e98786327af5e07c261fda175d3; jvm 1.8.0_121-b13
+2019-09-09 15:34:59.250  INFO 3344 --- [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring embedded WebApplicationContext
+2019-09-09 15:34:59.250  INFO 3344 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1368 ms
+2019-09-09 15:34:59.343  INFO 3344 --- [main] org.eclipse.jetty.server.session         : DefaultSessionIdManager workerName=node0
+2019-09-09 15:34:59.343  INFO 3344 --- [main] org.eclipse.jetty.server.session         : No SessionScavenger set, using defaults
+2019-09-09 15:34:59.344  INFO 3344 --- [main] org.eclipse.jetty.server.session         : node0 Scavenging every 660000ms
+2019-09-09 15:34:59.350  INFO 3344 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@19ff4d9{application,/informational-lyt/v1,[file:///C:/Users/Administrator/AppData/Local/Temp/jetty-docbase.3168404974590412980.8090/],AVAILABLE}
+2019-09-09 15:34:59.351  INFO 3344 --- [main] org.eclipse.jetty.server.Server          : Started @3147ms
+2019-09-09 15:34:59.467  INFO 3344 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-09 15:34:59.572  INFO 3344 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-09 15:34:59.627  INFO 3344 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-09 15:34:59.747  INFO 3344 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-09-09 15:34:59.749  INFO 3344 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-09 15:34:59.987  INFO 3344 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-09 15:35:00.282  INFO 3344 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-09-09 15:35:01.192  INFO 3344 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-09 15:35:02.007  INFO 3344 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-09 15:35:02.230  INFO 3344 --- [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-09 15:35:02.231  INFO 3344 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-09 15:35:02.237  INFO 3344 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-09-09 15:35:02.259  INFO 3344 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@16d10a4{HTTP/1.1,[http/1.1]}{0.0.0.0:8090}
+2019-09-09 15:35:02.262  INFO 3344 --- [main] o.s.b.web.embedded.jetty.JettyWebServer  : Jetty started on port(s) 8090 (http/1.1) with context path '/informational-lyt/v1'
+2019-09-09 15:35:02.263  INFO 3344 --- [main] c.j.x.i.InformationalLytApplication      : Started InformationalLytApplication in 4.97 seconds (JVM running for 6.058)
+2019-09-09 15:36:24.464  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:36:24.464  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/add
+2019-09-09 15:36:24.466  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.add
+2019-09-09 15:36:24.466  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerAddReq(name=5号仓库, code=001-A, business=null, contactPeople=null, contactPhone=null)
+2019-09-09 15:36:24.506  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:36:24.506  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:36:24.506  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:36:24.506  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:36:24.507  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/add
+2019-09-09 15:36:24.534  INFO 3344 --- [qtp9983638-18] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-09 15:36:24.679 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/add]
+2019-09-09 15:36:24.690  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:36:24.711 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [5号仓库]
+2019-09-09 15:36:24.749 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 15:36:24 CST 2019]
+2019-09-09 15:36:24.750 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [aiyo,great!]
+2019-09-09 15:36:24.752 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 15:36:24 CST 2019]
+2019-09-09 15:36:24.752 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [null]
+2019-09-09 15:36:24.752 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [001-A]
+2019-09-09 15:36:24.753 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [null]
+2019-09-09 15:36:24.753 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [VARCHAR] - [null]
+2019-09-09 15:36:24.753 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [VARCHAR] - [5号仓库]
+2019-09-09 15:36:24.780  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":1,"createTime":1568014584713,"updateTime":1568014584713,"remarks":"aiyo,great!","name":"5号仓库","code":"001-A","business":null,"contactPeople":null,"contactPhone":null},"code":200}
+2019-09-09 15:36:24.781  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 318ms
+2019-09-09 15:36:24.781  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:37:00.932  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:37:00.932  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/delete
+2019-09-09 15:37:00.932  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.update
+2019-09-09 15:37:00.933  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy)args=IdReq(id=1)
+2019-09-09 15:37:00.934  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:37:00.934  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:37:00.935  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:37:00.935  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:37:00.935  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/delete
+2019-09-09 15:37:00.938 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/delete]
+2019-09-09 15:37:00.940  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:37:00.953 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 15:37:00.984 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 15:37:00.991  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"state":true,"message":"操作成功","detailMessage":"删除成功","data":null,"code":200},"code":200}
+2019-09-09 15:37:00.991  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 59ms
+2019-09-09 15:37:00.991  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:37:58.370  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:37:58.370  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/delete
+2019-09-09 15:37:58.371  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.update
+2019-09-09 15:37:58.371  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy)args=IdReq(id=null)
+2019-09-09 15:37:58.372  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:37:58.372  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:37:58.373  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:37:58.373  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:37:58.373  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/delete
+2019-09-09 15:37:58.375 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/delete]
+2019-09-09 15:37:58.378  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:37:58.380  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":false,"message":"请求参数缺失或为空值","detailMessage":"ID不能为空","data":null,"code":100000}
+2019-09-09 15:37:58.380  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 10ms
+2019-09-09 15:37:58.380  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:38:02.632  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:38:02.632  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/add
+2019-09-09 15:38:02.633  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.add
+2019-09-09 15:38:02.633  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerAddReq(name=塑料厂A, code=001-A, business=出售有机塑料, contactPeople=张飞, contactPhone=null)
+2019-09-09 15:38:02.634  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:38:02.634  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:38:02.634  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:38:02.634  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:38:02.634  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/add
+2019-09-09 15:38:02.637 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/add]
+2019-09-09 15:38:02.640  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:38:02.644 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [塑料厂A]
+2019-09-09 15:38:02.648 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 15:38:02 CST 2019]
+2019-09-09 15:38:02.648 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [aiyo,zhangfei!!]
+2019-09-09 15:38:02.649 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 15:38:02 CST 2019]
+2019-09-09 15:38:02.649 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [出售有机塑料]
+2019-09-09 15:38:02.649 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [001-A]
+2019-09-09 15:38:02.649 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [张飞]
+2019-09-09 15:38:02.649 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [VARCHAR] - [null]
+2019-09-09 15:38:02.650 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [VARCHAR] - [塑料厂A]
+2019-09-09 15:38:02.661  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":2,"createTime":1568014682647,"updateTime":1568014682647,"remarks":"aiyo,zhangfei!!","name":"塑料厂A","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},"code":200}
+2019-09-09 15:38:02.661  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 29ms
+2019-09-09 15:38:02.661  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:38:05.390  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:38:05.391  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/add
+2019-09-09 15:38:05.391  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.add
+2019-09-09 15:38:05.391  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerAddReq(name=塑料厂B, code=001-A, business=出售有机塑料, contactPeople=张飞, contactPhone=null)
+2019-09-09 15:38:05.391  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:38:05.392  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:38:05.392  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:38:05.392  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:38:05.392  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/add
+2019-09-09 15:38:05.394 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/add]
+2019-09-09 15:38:05.397  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:38:05.400 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [塑料厂B]
+2019-09-09 15:38:05.404 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 15:38:05 CST 2019]
+2019-09-09 15:38:05.405 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [aiyo,zhangfei!!]
+2019-09-09 15:38:05.405 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 15:38:05 CST 2019]
+2019-09-09 15:38:05.406 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [出售有机塑料]
+2019-09-09 15:38:05.406 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [001-A]
+2019-09-09 15:38:05.406 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [张飞]
+2019-09-09 15:38:05.407 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [VARCHAR] - [null]
+2019-09-09 15:38:05.407 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [VARCHAR] - [塑料厂B]
+2019-09-09 15:38:05.418  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":3,"createTime":1568014685403,"updateTime":1568014685403,"remarks":"aiyo,zhangfei!!","name":"塑料厂B","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},"code":200}
+2019-09-09 15:38:05.418  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 28ms
+2019-09-09 15:38:05.418  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:38:07.647  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:38:07.648  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/add
+2019-09-09 15:38:07.648  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.add
+2019-09-09 15:38:07.648  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerAddReq(name=塑料厂C, code=001-A, business=出售有机塑料, contactPeople=张飞, contactPhone=null)
+2019-09-09 15:38:07.649  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:38:07.649  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:38:07.649  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:38:07.649  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:38:07.649  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/add
+2019-09-09 15:38:07.653 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/add]
+2019-09-09 15:38:07.655  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:38:07.658 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [塑料厂C]
+2019-09-09 15:38:07.662 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 15:38:07 CST 2019]
+2019-09-09 15:38:07.663 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [aiyo,zhangfei!!]
+2019-09-09 15:38:07.663 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 15:38:07 CST 2019]
+2019-09-09 15:38:07.663 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [出售有机塑料]
+2019-09-09 15:38:07.664 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [001-A]
+2019-09-09 15:38:07.664 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [张飞]
+2019-09-09 15:38:07.664 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [VARCHAR] - [null]
+2019-09-09 15:38:07.664 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [VARCHAR] - [塑料厂C]
+2019-09-09 15:38:07.674  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":4,"createTime":1568014687661,"updateTime":1568014687661,"remarks":"aiyo,zhangfei!!","name":"塑料厂C","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},"code":200}
+2019-09-09 15:38:07.674  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 27ms
+2019-09-09 15:38:07.674  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:38:10.185  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:38:10.186  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/add
+2019-09-09 15:38:10.186  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.add
+2019-09-09 15:38:10.186  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerAddReq(name=塑料厂D, code=001-A, business=出售有机塑料, contactPeople=张飞, contactPhone=null)
+2019-09-09 15:38:10.187  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:38:10.187  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:38:10.188  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:38:10.189  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:38:10.189  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/add
+2019-09-09 15:38:10.192 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/add]
+2019-09-09 15:38:10.195  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:38:10.198 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [塑料厂D]
+2019-09-09 15:38:10.201 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 15:38:10 CST 2019]
+2019-09-09 15:38:10.202 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [aiyo,zhangfei!!]
+2019-09-09 15:38:10.202 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 15:38:10 CST 2019]
+2019-09-09 15:38:10.202 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [出售有机塑料]
+2019-09-09 15:38:10.202 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [001-A]
+2019-09-09 15:38:10.202 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [张飞]
+2019-09-09 15:38:10.202 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [VARCHAR] - [null]
+2019-09-09 15:38:10.203 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [VARCHAR] - [塑料厂D]
+2019-09-09 15:38:10.212  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":5,"createTime":1568014690200,"updateTime":1568014690200,"remarks":"aiyo,zhangfei!!","name":"塑料厂D","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},"code":200}
+2019-09-09 15:38:10.212  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 27ms
+2019-09-09 15:38:10.212  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:38:13.338  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:38:13.339  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/add
+2019-09-09 15:38:13.339  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.add
+2019-09-09 15:38:13.339  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerAddReq(name=塑料厂E, code=001-A, business=出售有机塑料, contactPeople=张飞, contactPhone=null)
+2019-09-09 15:38:13.341  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:38:13.341  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:38:13.342  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:38:13.342  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:38:13.342  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/add
+2019-09-09 15:38:13.345 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/add]
+2019-09-09 15:38:13.347  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:38:13.350 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [塑料厂E]
+2019-09-09 15:38:13.354 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 15:38:13 CST 2019]
+2019-09-09 15:38:13.354 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [aiyo,zhangfei!!]
+2019-09-09 15:38:13.355 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 15:38:13 CST 2019]
+2019-09-09 15:38:13.355 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [出售有机塑料]
+2019-09-09 15:38:13.355 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [001-A]
+2019-09-09 15:38:13.355 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [张飞]
+2019-09-09 15:38:13.356 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [VARCHAR] - [null]
+2019-09-09 15:38:13.356 TRACE 3344 --- [qtp9983638-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [VARCHAR] - [塑料厂E]
+2019-09-09 15:38:13.366  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":6,"createTime":1568014693353,"updateTime":1568014693353,"remarks":"aiyo,zhangfei!!","name":"塑料厂E","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},"code":200}
+2019-09-09 15:38:13.366  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 28ms
+2019-09-09 15:38:13.366  INFO 3344 --- [qtp9983638-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:38:26.901  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:38:26.901  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/add
+2019-09-09 15:38:26.901  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.add
+2019-09-09 15:38:26.901  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerAddReq(name=塑料厂E, code=001-A, business=出售有机塑料, contactPeople=张飞, contactPhone=null)
+2019-09-09 15:38:26.902  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:38:26.902  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:38:26.902  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:38:26.902  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:38:26.903  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/add
+2019-09-09 15:38:26.905 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/add]
+2019-09-09 15:38:26.908  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:38:26.911 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [塑料厂E]
+2019-09-09 15:38:26.918  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":false,"message":"名称已存在","detailMessage":"名称已存在","data":null,"code":241}
+2019-09-09 15:38:26.918  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 17ms
+2019-09-09 15:38:26.918  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:39:20.682  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:39:20.683  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/add
+2019-09-09 15:39:20.683  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.add
+2019-09-09 15:39:20.684  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerAddReq(name=塑料厂E_change, code=001-A, business=出售有机塑料, contactPeople=张飞, contactPhone=null)
+2019-09-09 15:39:20.684  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:39:20.685  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:39:20.685  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:39:20.685  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:39:20.685  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/add
+2019-09-09 15:39:20.688 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/add]
+2019-09-09 15:39:20.691  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:39:20.694 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [塑料厂E_change]
+2019-09-09 15:39:20.697 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 15:39:20 CST 2019]
+2019-09-09 15:39:20.698 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [aiyo,zhangfei!!]
+2019-09-09 15:39:20.699 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 15:39:20 CST 2019]
+2019-09-09 15:39:20.699 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [出售有机塑料]
+2019-09-09 15:39:20.699 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [001-A]
+2019-09-09 15:39:20.699 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [张飞]
+2019-09-09 15:39:20.700 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [VARCHAR] - [null]
+2019-09-09 15:39:20.700 TRACE 3344 --- [qtp9983638-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [VARCHAR] - [塑料厂E_change]
+2019-09-09 15:39:20.708  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":7,"createTime":1568014760696,"updateTime":1568014760696,"remarks":"aiyo,zhangfei!!","name":"塑料厂E_change","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},"code":200}
+2019-09-09 15:39:20.709  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 27ms
+2019-09-09 15:39:20.709  INFO 3344 --- [qtp9983638-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:39:27.325  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:39:27.325  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/update
+2019-09-09 15:39:27.325  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.update
+2019-09-09 15:39:27.325  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerUpdateReq(name=塑料厂E_change, code=001-A, business=出售有机塑料, contactPeople=张飞, contactPhone=null)
+2019-09-09 15:39:27.326  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:39:27.326  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:39:27.326  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:39:27.327  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:39:27.327  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/update
+2019-09-09 15:39:27.329 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/update]
+2019-09-09 15:39:27.332  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:39:27.334 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [6]
+2019-09-09 15:39:27.338 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [塑料厂E_change]
+2019-09-09 15:39:27.346  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":false,"message":"名称已存在","detailMessage":"名称已存在","data":null,"code":241}
+2019-09-09 15:39:27.346  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 21ms
+2019-09-09 15:39:27.346  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:39:33.316  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:39:33.317  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/update
+2019-09-09 15:39:33.317  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.update
+2019-09-09 15:39:33.317  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerUpdateReq(name=塑料厂E_changes, code=001-A, business=出售有机塑料, contactPeople=张飞, contactPhone=null)
+2019-09-09 15:39:33.318  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:39:33.318  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:39:33.318  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:39:33.318  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:39:33.318  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/update
+2019-09-09 15:39:33.321 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/update]
+2019-09-09 15:39:33.323  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:39:33.326 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [6]
+2019-09-09 15:39:33.329 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [塑料厂E_changes]
+2019-09-09 15:39:33.342 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [2019-09-09 15:38:13.0]
+2019-09-09 15:39:33.342 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [aiyo,zhangfei!!]
+2019-09-09 15:39:33.342 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [2019-09-09 15:38:13.0]
+2019-09-09 15:39:33.343 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [出售有机塑料]
+2019-09-09 15:39:33.343 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [001-A]
+2019-09-09 15:39:33.343 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [张飞]
+2019-09-09 15:39:33.343 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [VARCHAR] - [null]
+2019-09-09 15:39:33.344 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [VARCHAR] - [塑料厂E_changes]
+2019-09-09 15:39:33.344 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [9] as [BIGINT] - [6]
+2019-09-09 15:39:33.354  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":6,"createTime":1568014693000,"updateTime":1568014693000,"remarks":"aiyo,zhangfei!!","name":"塑料厂E_changes","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},"code":200}
+2019-09-09 15:39:33.354  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 38ms
+2019-09-09 15:39:33.354  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:40:26.908  WARN 3344 --- [qtp9983638-19] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected end-of-input: expected close marker for Object (start marker at [Source: (PushbackInputStream); line: 1, column: 1]); nested exception is com.fasterxml.jackson.core.io.JsonEOFException: Unexpected end-of-input: expected close marker for Object (start marker at [Source: (PushbackInputStream); line: 1, column: 1])
+ at [Source: (PushbackInputStream); line: 2, column: 37]]
+2019-09-09 15:40:31.961  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:40:31.962  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/get
+2019-09-09 15:40:31.962  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.get
+2019-09-09 15:40:31.962  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy)args=IdReq(id=6)
+2019-09-09 15:40:31.963  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:40:31.963  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:40:31.963  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:40:31.963  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:40:31.963  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/get
+2019-09-09 15:40:31.966 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/get]
+2019-09-09 15:40:31.968  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:40:31.971 TRACE 3344 --- [qtp9983638-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [6]
+2019-09-09 15:40:31.980  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":6,"createTime":1568014693000,"updateTime":1568014693000,"remarks":"aiyo,zhangfei!!","name":"塑料厂E_changes","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},"code":200}
+2019-09-09 15:40:31.981  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 20ms
+2019-09-09 15:40:31.981  INFO 3344 --- [qtp9983638-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:41:00.273  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:41:00.274  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/delete
+2019-09-09 15:41:00.274  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.update
+2019-09-09 15:41:00.274  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy)args=IdReq(id=60)
+2019-09-09 15:41:00.275  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:41:00.275  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:41:00.275  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:41:00.275  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:41:00.275  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/delete
+2019-09-09 15:41:00.278 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/delete]
+2019-09-09 15:41:00.281  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:41:00.284 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [60]
+2019-09-09 15:41:00.290  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":false,"message":"数据信息不存在","detailMessage":"数据信息不存在","data":null,"code":242}
+2019-09-09 15:41:00.290  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 17ms
+2019-09-09 15:41:00.290  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:41:58.273  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:41:58.273  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/getPagerList
+2019-09-09 15:41:58.273  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.getPagerList
+2019-09-09 15:41:58.273  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerGetListReq(name=一号仓库, code=001-A, business=null, contactPeople=null, contactPhone=null)
+2019-09-09 15:41:58.274  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:41:58.274  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:41:58.275  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:41:58.275  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:41:58.275  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/getPagerList
+2019-09-09 15:41:58.277 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/getPagerList]
+2019-09-09 15:41:58.280  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:41:58.293 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [%一号仓库%]
+2019-09-09 15:41:58.293 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [%001-A%]
+2019-09-09 15:41:58.315  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"content":[],"pageable":{"sort":{"sorted":false,"unsorted":true,"empty":true},"offset":0,"pageSize":10,"pageNumber":0,"unpaged":false,"paged":true},"totalElements":0,"totalPages":0,"last":true,"size":10,"number":0,"sort":{"sorted":false,"unsorted":true,"empty":true},"numberOfElements":0,"first":true,"empty":true},"code":200}
+2019-09-09 15:41:58.315  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 42ms
+2019-09-09 15:41:58.315  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:42:13.102  WARN 3344 --- [qtp9983638-29] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
+ at [Source: (PushbackInputStream); line: 3, column: 2]]
+2019-09-09 15:42:14.871  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:42:14.871  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/getPagerList
+2019-09-09 15:42:14.871  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.getPagerList
+2019-09-09 15:42:14.871  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerGetListReq(name=A, code=null, business=null, contactPeople=null, contactPhone=null)
+2019-09-09 15:42:14.876  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:42:14.876  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:42:14.876  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:42:14.877  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:42:14.877  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/getPagerList
+2019-09-09 15:42:14.881 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/getPagerList]
+2019-09-09 15:42:14.884  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:42:14.888 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [%A%]
+2019-09-09 15:42:14.903  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"content":[{"id":2,"createTime":1568014683000,"updateTime":1568014683000,"remarks":"aiyo,zhangfei!!","name":"塑料厂A","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},{"id":6,"createTime":1568014693000,"updateTime":1568014693000,"remarks":"aiyo,zhangfei!!","name":"塑料厂E_changes","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},{"id":7,"createTime":1568014761000,"updateTime":1568014761000,"remarks":"aiyo,zhangfei!!","name":"塑料厂E_change","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null}],"pageable":{"sort":{"sorted":false,"unsorted":true,"empty":true},"offset":0,"pageSize":10,"pageNumber":0,"unpaged":false,"paged":true},"totalElements":3,"totalPages":1,"last":true,"size":10,"number":0,"sort":{"sorted":false,"unsorted":true,"empty":true},"numberOfElements":3,"first":true,"empty":false},"code":200}
+2019-09-09 15:42:14.903  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 32ms
+2019-09-09 15:42:14.903  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:48:20.875  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:48:20.875  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/getPagerList
+2019-09-09 15:48:20.875  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.getPagerList
+2019-09-09 15:48:20.875  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerGetListReq(name=A, code=null, business=null, contactPeople=null, contactPhone=null)
+2019-09-09 15:48:20.876  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:48:20.876  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:48:20.876  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:48:20.876  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:48:20.877  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/getPagerList
+2019-09-09 15:48:20.880 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/getPagerList]
+2019-09-09 15:48:20.882  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:48:20.885 TRACE 3344 --- [qtp9983638-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [%A%]
+2019-09-09 15:48:20.898  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"content":[{"id":2,"createTime":1568014683000,"updateTime":1568014683000,"remarks":"aiyo,zhangfei!!","name":"塑料厂A","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},{"id":6,"createTime":1568014693000,"updateTime":1568014693000,"remarks":"aiyo,zhangfei!!","name":"塑料厂E_changes","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},{"id":7,"createTime":1568014761000,"updateTime":1568014761000,"remarks":"aiyo,zhangfei!!","name":"塑料厂E_change","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null}],"pageable":{"sort":{"sorted":false,"unsorted":true,"empty":true},"offset":0,"pageSize":10,"pageNumber":0,"unpaged":false,"paged":true},"totalElements":3,"totalPages":1,"last":true,"size":10,"number":0,"sort":{"sorted":false,"unsorted":true,"empty":true},"numberOfElements":3,"first":true,"empty":false},"code":200}
+2019-09-09 15:48:20.898  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 23ms
+2019-09-09 15:48:20.898  INFO 3344 --- [qtp9983638-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 15:48:44.254  INFO 3344 --- [qtp9983638-16] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 15:48:44.254  INFO 3344 --- [qtp9983638-16] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-manufacturer/getAllList
+2019-09-09 15:48:44.254  INFO 3344 --- [qtp9983638-16] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.ManufacturerController.getAllList
+2019-09-09 15:48:44.254  INFO 3344 --- [qtp9983638-16] c.j.x.i.publish.utils.LogUtil            : (joy)args=ManufacturerGetListReq(name=A, code=null, business=null, contactPeople=null, contactPhone=null)
+2019-09-09 15:48:44.255  INFO 3344 --- [qtp9983638-16] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 15:48:44.255  INFO 3344 --- [qtp9983638-16] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 15:48:44.255  INFO 3344 --- [qtp9983638-16] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 15:48:44.255  INFO 3344 --- [qtp9983638-16] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 15:48:44.255  INFO 3344 --- [qtp9983638-16] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-manufacturer/getAllList
+2019-09-09 15:48:44.258 TRACE 3344 --- [qtp9983638-16] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-manufacturer/getAllList]
+2019-09-09 15:48:44.261  INFO 3344 --- [qtp9983638-16] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 15:48:44.264 TRACE 3344 --- [qtp9983638-16] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [%A%]
+2019-09-09 15:48:44.276  INFO 3344 --- [qtp9983638-16] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":[{"id":2,"createTime":1568014683000,"updateTime":1568014683000,"remarks":"aiyo,zhangfei!!","name":"塑料厂A","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},{"id":6,"createTime":1568014693000,"updateTime":1568014693000,"remarks":"aiyo,zhangfei!!","name":"塑料厂E_changes","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null},{"id":7,"createTime":1568014761000,"updateTime":1568014761000,"remarks":"aiyo,zhangfei!!","name":"塑料厂E_change","code":"001-A","business":"出售有机塑料","contactPeople":"张飞","contactPhone":null}],"code":200}
+2019-09-09 15:48:44.277  INFO 3344 --- [qtp9983638-16] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 23ms
+2019-09-09 15:48:44.277  INFO 3344 --- [qtp9983638-16] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:17:54.078  INFO 4012 --- [main] c.j.x.i.InformationalLytApplication      : Starting InformationalLytApplication on DESKTOP-C3BJLCD with PID 4012 (D:\github\informational-lyt\target\classes started by Administrator in D:\github\informational-lyt)
+2019-09-09 16:17:54.084  INFO 4012 --- [main] c.j.x.i.InformationalLytApplication      : No active profile set, falling back to default profiles: default
+2019-09-09 16:17:55.020  INFO 4012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-09 16:17:55.123  INFO 4012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97ms. Found 8 repository interfaces.
+2019-09-09 16:17:55.499  INFO 4012 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f9f45cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-09 16:17:55.801  INFO 4012 --- [main] org.eclipse.jetty.util.log               : Logging initialized @3811ms to org.eclipse.jetty.util.log.Slf4jLog
+2019-09-09 16:17:55.873  INFO 4012 --- [main] o.s.b.w.e.j.JettyServletWebServerFactory : Server initialized with port: 8090
+2019-09-09 16:17:55.875  INFO 4012 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.19.v20190610; built: 2019-06-10T16:30:51.723Z; git: afcf563148970e98786327af5e07c261fda175d3; jvm 1.8.0_121-b13
+2019-09-09 16:17:55.897  INFO 4012 --- [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring embedded WebApplicationContext
+2019-09-09 16:17:55.897  INFO 4012 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1713 ms
+2019-09-09 16:17:55.994  INFO 4012 --- [main] org.eclipse.jetty.server.session         : DefaultSessionIdManager workerName=node0
+2019-09-09 16:17:55.994  INFO 4012 --- [main] org.eclipse.jetty.server.session         : No SessionScavenger set, using defaults
+2019-09-09 16:17:55.995  INFO 4012 --- [main] org.eclipse.jetty.server.session         : node0 Scavenging every 600000ms
+2019-09-09 16:17:56.002  INFO 4012 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@1dfcf21{application,/informational-lyt/v1,[file:///C:/Users/Administrator/AppData/Local/Temp/jetty-docbase.8066891159190589862.8090/],AVAILABLE}
+2019-09-09 16:17:56.003  INFO 4012 --- [main] org.eclipse.jetty.server.Server          : Started @4013ms
+2019-09-09 16:17:56.130  INFO 4012 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-09 16:17:56.334  INFO 4012 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-09 16:17:56.391  INFO 4012 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-09 16:17:56.469  INFO 4012 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-09-09 16:17:56.471  INFO 4012 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-09 16:17:56.639  INFO 4012 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-09 16:17:56.782  INFO 4012 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-09-09 16:17:57.737  INFO 4012 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-09 16:17:58.725  INFO 4012 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-09 16:17:58.991  INFO 4012 --- [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-09 16:17:58.991  INFO 4012 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-09 16:17:59.000  INFO 4012 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-09-09 16:17:59.024  INFO 4012 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@1ae095c{HTTP/1.1,[http/1.1]}{0.0.0.0:8090}
+2019-09-09 16:17:59.027  INFO 4012 --- [main] o.s.b.web.embedded.jetty.JettyWebServer  : Jetty started on port(s) 8090 (http/1.1) with context path '/informational-lyt/v1'
+2019-09-09 16:17:59.029  INFO 4012 --- [main] c.j.x.i.InformationalLytApplication      : Started InformationalLytApplication in 5.788 seconds (JVM running for 7.039)
+2019-09-09 16:21:45.966  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:21:45.966  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/add
+2019-09-09 16:21:45.968  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.add
+2019-09-09 16:21:45.968  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryAddReq(name=机电, parentId=0)
+2019-09-09 16:21:46.016  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:21:46.017  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:21:46.017  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:21:46.017  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:21:46.017  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/add
+2019-09-09 16:21:46.041  INFO 4012 --- [qtp10946087-19] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-09 16:21:46.250 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/add]
+2019-09-09 16:21:46.259  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:21:46.279 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [0]
+2019-09-09 16:21:46.309 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [0]
+2019-09-09 16:21:46.310 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [机电]
+2019-09-09 16:21:46.349 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:21:46 CST 2019]
+2019-09-09 16:21:46.350 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:21:46.351 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:21:46 CST 2019]
+2019-09-09 16:21:46.351 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电]
+2019-09-09 16:21:46.351 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [0]
+2019-09-09 16:21:46.351 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - []
+2019-09-09 16:21:46.369 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:21:46 CST 2019]
+2019-09-09 16:21:46.369 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:21:46.370 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:21:46 CST 2019]
+2019-09-09 16:21:46.370 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电]
+2019-09-09 16:21:46.370 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [0]
+2019-09-09 16:21:46.370 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - [1-]
+2019-09-09 16:21:46.370 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [1]
+2019-09-09 16:21:46.391  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":1,"createTime":1568017306314,"updateTime":1568017306314,"remarks":null,"name":"机电","parentId":0,"path":"1-","children":null},"code":200}
+2019-09-09 16:21:46.391  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 426ms
+2019-09-09 16:21:46.392  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:22:47.745  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:22:47.745  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/add
+2019-09-09 16:22:47.745  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.add
+2019-09-09 16:22:47.745  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryAddReq(name=木材, parentId=0)
+2019-09-09 16:22:47.747  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:22:47.747  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:22:47.748  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:22:47.748  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:22:47.748  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/add
+2019-09-09 16:22:47.751 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/add]
+2019-09-09 16:22:47.754  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:22:47.758 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [0]
+2019-09-09 16:22:47.761 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [0]
+2019-09-09 16:22:47.763 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [木材]
+2019-09-09 16:22:47.768 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:22:47 CST 2019]
+2019-09-09 16:22:47.768 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:22:47.768 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:22:47 CST 2019]
+2019-09-09 16:22:47.769 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [木材]
+2019-09-09 16:22:47.769 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [0]
+2019-09-09 16:22:47.769 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - []
+2019-09-09 16:22:47.774 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:22:47 CST 2019]
+2019-09-09 16:22:47.774 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:22:47.775 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:22:47 CST 2019]
+2019-09-09 16:22:47.775 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [木材]
+2019-09-09 16:22:47.775 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [0]
+2019-09-09 16:22:47.775 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - [2-]
+2019-09-09 16:22:47.776 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [2]
+2019-09-09 16:22:47.789  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":2,"createTime":1568017367766,"updateTime":1568017367766,"remarks":null,"name":"木材","parentId":0,"path":"2-","children":null},"code":200}
+2019-09-09 16:22:47.790  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 45ms
+2019-09-09 16:22:47.790  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:22:56.149  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:22:56.150  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/add
+2019-09-09 16:22:56.150  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.add
+2019-09-09 16:22:56.150  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryAddReq(name=机电A, parentId=1)
+2019-09-09 16:22:56.151  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:22:56.152  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:22:56.152  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:22:56.152  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:22:56.152  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/add
+2019-09-09 16:22:56.155 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/add]
+2019-09-09 16:22:56.159  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:22:56.161 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 16:22:56.176 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 16:22:56.177 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [机电A]
+2019-09-09 16:22:56.180 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:22:56 CST 2019]
+2019-09-09 16:22:56.181 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:22:56.181 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:22:56 CST 2019]
+2019-09-09 16:22:56.182 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电A]
+2019-09-09 16:22:56.182 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [1]
+2019-09-09 16:22:56.182 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - []
+2019-09-09 16:22:56.187 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:22:56 CST 2019]
+2019-09-09 16:22:56.188 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:22:56.188 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:22:56 CST 2019]
+2019-09-09 16:22:56.188 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电A]
+2019-09-09 16:22:56.189 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [1]
+2019-09-09 16:22:56.189 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - [1-3-]
+2019-09-09 16:22:56.189 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [3]
+2019-09-09 16:22:56.199  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":3,"createTime":1568017376179,"updateTime":1568017376179,"remarks":null,"name":"机电A","parentId":1,"path":"1-3-","children":null},"code":200}
+2019-09-09 16:22:56.200  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 51ms
+2019-09-09 16:22:56.200  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:22:58.583  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:22:58.583  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/add
+2019-09-09 16:22:58.584  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.add
+2019-09-09 16:22:58.584  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryAddReq(name=机电B, parentId=1)
+2019-09-09 16:22:58.585  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:22:58.585  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:22:58.585  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:22:58.585  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:22:58.586  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/add
+2019-09-09 16:22:58.589 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/add]
+2019-09-09 16:22:58.592  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:22:58.600 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 16:22:58.606 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 16:22:58.607 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [机电B]
+2019-09-09 16:22:58.611 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:22:58 CST 2019]
+2019-09-09 16:22:58.611 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:22:58.611 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:22:58 CST 2019]
+2019-09-09 16:22:58.611 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电B]
+2019-09-09 16:22:58.611 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [1]
+2019-09-09 16:22:58.612 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - []
+2019-09-09 16:22:58.616 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:22:58 CST 2019]
+2019-09-09 16:22:58.616 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:22:58.617 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:22:58 CST 2019]
+2019-09-09 16:22:58.617 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电B]
+2019-09-09 16:22:58.617 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [1]
+2019-09-09 16:22:58.617 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - [1-4-]
+2019-09-09 16:22:58.618 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [4]
+2019-09-09 16:22:58.628  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":4,"createTime":1568017378609,"updateTime":1568017378609,"remarks":null,"name":"机电B","parentId":1,"path":"1-4-","children":null},"code":200}
+2019-09-09 16:22:58.629  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 46ms
+2019-09-09 16:22:58.629  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:23:01.374  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:23:01.374  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/add
+2019-09-09 16:23:01.374  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.add
+2019-09-09 16:23:01.374  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryAddReq(name=机电C, parentId=1)
+2019-09-09 16:23:01.375  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:23:01.375  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:23:01.375  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:23:01.375  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:23:01.375  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/add
+2019-09-09 16:23:01.378 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/add]
+2019-09-09 16:23:01.380  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:23:01.383 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 16:23:01.388 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 16:23:01.388 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [机电C]
+2019-09-09 16:23:01.392 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:01 CST 2019]
+2019-09-09 16:23:01.392 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:01.393 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:01 CST 2019]
+2019-09-09 16:23:01.393 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电C]
+2019-09-09 16:23:01.393 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [1]
+2019-09-09 16:23:01.393 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - []
+2019-09-09 16:23:01.397 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:01 CST 2019]
+2019-09-09 16:23:01.397 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:01.398 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:01 CST 2019]
+2019-09-09 16:23:01.398 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电C]
+2019-09-09 16:23:01.398 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [1]
+2019-09-09 16:23:01.398 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - [1-5-]
+2019-09-09 16:23:01.399 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [5]
+2019-09-09 16:23:01.409  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":5,"createTime":1568017381391,"updateTime":1568017381391,"remarks":null,"name":"机电C","parentId":1,"path":"1-5-","children":null},"code":200}
+2019-09-09 16:23:01.409  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 35ms
+2019-09-09 16:23:01.410  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:23:03.752  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:23:03.753  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/add
+2019-09-09 16:23:03.753  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.add
+2019-09-09 16:23:03.753  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryAddReq(name=机电D, parentId=1)
+2019-09-09 16:23:03.754  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:23:03.754  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:23:03.754  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:23:03.754  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:23:03.754  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/add
+2019-09-09 16:23:03.757 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/add]
+2019-09-09 16:23:03.760  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:23:03.763 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 16:23:03.767 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 16:23:03.768 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [机电D]
+2019-09-09 16:23:03.772 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:03 CST 2019]
+2019-09-09 16:23:03.772 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:03.773 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:03 CST 2019]
+2019-09-09 16:23:03.773 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电D]
+2019-09-09 16:23:03.773 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [1]
+2019-09-09 16:23:03.773 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - []
+2019-09-09 16:23:03.777 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:03 CST 2019]
+2019-09-09 16:23:03.777 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:03.777 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:03 CST 2019]
+2019-09-09 16:23:03.784 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电D]
+2019-09-09 16:23:03.785 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [1]
+2019-09-09 16:23:03.785 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - [1-6-]
+2019-09-09 16:23:03.785 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [6]
+2019-09-09 16:23:03.800  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":6,"createTime":1568017383771,"updateTime":1568017383771,"remarks":null,"name":"机电D","parentId":1,"path":"1-6-","children":null},"code":200}
+2019-09-09 16:23:03.800  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 48ms
+2019-09-09 16:23:03.800  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:23:10.687  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:23:10.687  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/add
+2019-09-09 16:23:10.688  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.add
+2019-09-09 16:23:10.688  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryAddReq(name=机电D-1, parentId=6)
+2019-09-09 16:23:10.689  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:23:10.689  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:23:10.689  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:23:10.689  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:23:10.689  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/add
+2019-09-09 16:23:10.692 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/add]
+2019-09-09 16:23:10.696  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:23:10.699 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [6]
+2019-09-09 16:23:10.703 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [6]
+2019-09-09 16:23:10.704 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [机电D-1]
+2019-09-09 16:23:10.707 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:10 CST 2019]
+2019-09-09 16:23:10.708 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:10.708 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:10 CST 2019]
+2019-09-09 16:23:10.708 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电D-1]
+2019-09-09 16:23:10.708 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [6]
+2019-09-09 16:23:10.709 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - []
+2019-09-09 16:23:10.712 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:10 CST 2019]
+2019-09-09 16:23:10.712 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:10.713 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:10 CST 2019]
+2019-09-09 16:23:10.713 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电D-1]
+2019-09-09 16:23:10.713 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [6]
+2019-09-09 16:23:10.713 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - [1-6-7-]
+2019-09-09 16:23:10.713 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [7]
+2019-09-09 16:23:10.731  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":7,"createTime":1568017390706,"updateTime":1568017390706,"remarks":null,"name":"机电D-1","parentId":6,"path":"1-6-7-","children":null},"code":200}
+2019-09-09 16:23:10.732  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 45ms
+2019-09-09 16:23:10.732  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:23:13.993  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:23:13.993  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/add
+2019-09-09 16:23:13.993  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.add
+2019-09-09 16:23:13.993  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryAddReq(name=机电D-2, parentId=6)
+2019-09-09 16:23:13.996  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:23:13.996  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:23:13.996  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:23:13.996  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:23:13.996  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/add
+2019-09-09 16:23:13.999 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/add]
+2019-09-09 16:23:14.002  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:23:14.005 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [6]
+2019-09-09 16:23:14.009 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [6]
+2019-09-09 16:23:14.010 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [机电D-2]
+2019-09-09 16:23:14.014 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:14 CST 2019]
+2019-09-09 16:23:14.014 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:14.015 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:14 CST 2019]
+2019-09-09 16:23:14.015 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电D-2]
+2019-09-09 16:23:14.015 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [6]
+2019-09-09 16:23:14.015 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - []
+2019-09-09 16:23:14.022 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:14 CST 2019]
+2019-09-09 16:23:14.023 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:14.023 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:14 CST 2019]
+2019-09-09 16:23:14.024 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电D-2]
+2019-09-09 16:23:14.024 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [6]
+2019-09-09 16:23:14.024 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - [1-6-8-]
+2019-09-09 16:23:14.024 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [8]
+2019-09-09 16:23:14.035  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":8,"createTime":1568017394013,"updateTime":1568017394013,"remarks":null,"name":"机电D-2","parentId":6,"path":"1-6-8-","children":null},"code":200}
+2019-09-09 16:23:14.035  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 42ms
+2019-09-09 16:23:14.036  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:23:17.063  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:23:17.064  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/add
+2019-09-09 16:23:17.064  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.add
+2019-09-09 16:23:17.064  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryAddReq(name=机电D-3, parentId=6)
+2019-09-09 16:23:17.065  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:23:17.065  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:23:17.065  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:23:17.065  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:23:17.066  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/add
+2019-09-09 16:23:17.069 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/add]
+2019-09-09 16:23:17.072  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:23:17.075 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [6]
+2019-09-09 16:23:17.079 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [6]
+2019-09-09 16:23:17.080 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [机电D-3]
+2019-09-09 16:23:17.084 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:17 CST 2019]
+2019-09-09 16:23:17.084 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:17.084 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:17 CST 2019]
+2019-09-09 16:23:17.085 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电D-3]
+2019-09-09 16:23:17.085 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [6]
+2019-09-09 16:23:17.085 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - []
+2019-09-09 16:23:17.090 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:17 CST 2019]
+2019-09-09 16:23:17.090 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:17.090 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:17 CST 2019]
+2019-09-09 16:23:17.090 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电D-3]
+2019-09-09 16:23:17.091 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [6]
+2019-09-09 16:23:17.091 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - [1-6-9-]
+2019-09-09 16:23:17.091 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [9]
+2019-09-09 16:23:17.103  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":9,"createTime":1568017397083,"updateTime":1568017397083,"remarks":null,"name":"机电D-3","parentId":6,"path":"1-6-9-","children":null},"code":200}
+2019-09-09 16:23:17.103  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 40ms
+2019-09-09 16:23:17.103  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:23:22.635  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:23:22.635  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/add
+2019-09-09 16:23:22.635  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.add
+2019-09-09 16:23:22.635  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryAddReq(name=机电D-3-1, parentId=9)
+2019-09-09 16:23:22.636  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:23:22.637  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:23:22.637  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:23:22.637  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:23:22.637  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/add
+2019-09-09 16:23:22.640 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/add]
+2019-09-09 16:23:22.643  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:23:22.647 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [9]
+2019-09-09 16:23:22.650 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [9]
+2019-09-09 16:23:22.651 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [机电D-3-1]
+2019-09-09 16:23:22.655 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:22 CST 2019]
+2019-09-09 16:23:22.656 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:22.656 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:22 CST 2019]
+2019-09-09 16:23:22.656 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电D-3-1]
+2019-09-09 16:23:22.656 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [9]
+2019-09-09 16:23:22.657 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - []
+2019-09-09 16:23:22.660 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:22 CST 2019]
+2019-09-09 16:23:22.661 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:22.661 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:22 CST 2019]
+2019-09-09 16:23:22.661 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电D-3-1]
+2019-09-09 16:23:22.661 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [9]
+2019-09-09 16:23:22.662 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - [1-6-9-10-]
+2019-09-09 16:23:22.662 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [10]
+2019-09-09 16:23:22.673  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":10,"createTime":1568017402654,"updateTime":1568017402654,"remarks":null,"name":"机电D-3-1","parentId":9,"path":"1-6-9-10-","children":null},"code":200}
+2019-09-09 16:23:22.673  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 38ms
+2019-09-09 16:23:22.673  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:23:25.307  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:23:25.307  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/add
+2019-09-09 16:23:25.307  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.add
+2019-09-09 16:23:25.307  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryAddReq(name=机电D-3-2, parentId=9)
+2019-09-09 16:23:25.308  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:23:25.308  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:23:25.308  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:23:25.308  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:23:25.308  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/add
+2019-09-09 16:23:25.311 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/add]
+2019-09-09 16:23:25.314  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:23:25.318 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [9]
+2019-09-09 16:23:25.322 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [9]
+2019-09-09 16:23:25.322 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [机电D-3-2]
+2019-09-09 16:23:25.325 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:25 CST 2019]
+2019-09-09 16:23:25.326 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:25.326 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:25 CST 2019]
+2019-09-09 16:23:25.326 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电D-3-2]
+2019-09-09 16:23:25.326 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [9]
+2019-09-09 16:23:25.326 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - []
+2019-09-09 16:23:25.331 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [Mon Sep 09 16:23:25 CST 2019]
+2019-09-09 16:23:25.331 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:23:25.332 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 16:23:25 CST 2019]
+2019-09-09 16:23:25.332 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电D-3-2]
+2019-09-09 16:23:25.332 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [9]
+2019-09-09 16:23:25.332 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - [1-6-9-11-]
+2019-09-09 16:23:25.332 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [11]
+2019-09-09 16:23:25.342  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":11,"createTime":1568017405324,"updateTime":1568017405324,"remarks":null,"name":"机电D-3-2","parentId":9,"path":"1-6-9-11-","children":null},"code":200}
+2019-09-09 16:23:25.342  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 35ms
+2019-09-09 16:23:25.342  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:23:40.728  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:23:40.728  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/add
+2019-09-09 16:23:40.728  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.add
+2019-09-09 16:23:40.728  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryAddReq(name=机电D-3-2, parentId=9)
+2019-09-09 16:23:40.729  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:23:40.729  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:23:40.729  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:23:40.729  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:23:40.729  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/add
+2019-09-09 16:23:40.733 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/add]
+2019-09-09 16:23:40.736  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:23:40.739 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [9]
+2019-09-09 16:23:40.742 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [9]
+2019-09-09 16:23:40.743 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [机电D-3-2]
+2019-09-09 16:23:40.751  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":false,"message":"名称已存在","detailMessage":"名称已存在","data":null,"code":241}
+2019-09-09 16:23:40.751  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 23ms
+2019-09-09 16:23:40.751  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:24:27.158  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:24:27.158  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/get
+2019-09-09 16:24:27.158  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.get
+2019-09-09 16:24:27.158  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy)args=IdReq(id=8)
+2019-09-09 16:24:27.159  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:24:27.159  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:24:27.160  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:24:27.160  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:24:27.160  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/get
+2019-09-09 16:24:27.163 TRACE 4012 --- [qtp10946087-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/get]
+2019-09-09 16:24:27.166  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:24:27.169 TRACE 4012 --- [qtp10946087-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [8]
+2019-09-09 16:24:27.180  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":8,"createTime":1568017394000,"updateTime":1568017394000,"remarks":null,"name":"机电D-2","parentId":6,"path":"1-6-8-","children":null},"code":200}
+2019-09-09 16:24:27.180  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 22ms
+2019-09-09 16:24:27.180  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:24:50.387  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:24:50.387  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/getTree
+2019-09-09 16:24:50.388  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.getTree
+2019-09-09 16:24:50.388  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)args=IdReq(id=8)
+2019-09-09 16:24:50.388  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:24:50.389  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:24:50.389  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:24:50.389  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:24:50.389  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/getTree
+2019-09-09 16:24:50.392 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/getTree]
+2019-09-09 16:24:50.395  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:24:50.399 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [8]
+2019-09-09 16:24:50.412 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [CLOB] - [1-6-8-%]
+2019-09-09 16:24:50.412 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CHAR] - [\]
+2019-09-09 16:24:50.423  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":[],"code":200}
+2019-09-09 16:24:50.423  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 36ms
+2019-09-09 16:24:50.424  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:24:54.445  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:24:54.445  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/getTree
+2019-09-09 16:24:54.446  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.getTree
+2019-09-09 16:24:54.446  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy)args=IdReq(id=5)
+2019-09-09 16:24:54.447  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:24:54.447  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:24:54.447  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:24:54.447  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:24:54.448  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/getTree
+2019-09-09 16:24:54.451 TRACE 4012 --- [qtp10946087-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/getTree]
+2019-09-09 16:24:54.454  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:24:54.457 TRACE 4012 --- [qtp10946087-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [5]
+2019-09-09 16:24:54.461 TRACE 4012 --- [qtp10946087-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [CLOB] - [1-5-%]
+2019-09-09 16:24:54.462 TRACE 4012 --- [qtp10946087-13] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CHAR] - [\]
+2019-09-09 16:24:54.469  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":[],"code":200}
+2019-09-09 16:24:54.469  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 24ms
+2019-09-09 16:24:54.469  INFO 4012 --- [qtp10946087-13] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:24:57.687  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:24:57.688  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/getTree
+2019-09-09 16:24:57.688  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.getTree
+2019-09-09 16:24:57.688  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy)args=IdReq(id=6)
+2019-09-09 16:24:57.692  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:24:57.692  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:24:57.692  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:24:57.693  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:24:57.693  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/getTree
+2019-09-09 16:24:57.697 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/getTree]
+2019-09-09 16:24:57.700  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:24:57.703 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [6]
+2019-09-09 16:24:57.708 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [CLOB] - [1-6-%]
+2019-09-09 16:24:57.708 TRACE 4012 --- [qtp10946087-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CHAR] - [\]
+2019-09-09 16:24:57.751  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":[{"id":7,"createTime":1568017391000,"updateTime":1568017391000,"remarks":null,"name":"机电D-1","parentId":6,"path":"1-6-7-","children":null},{"id":8,"createTime":1568017394000,"updateTime":1568017394000,"remarks":null,"name":"机电D-2","parentId":6,"path":"1-6-8-","children":null},{"id":9,"createTime":1568017397000,"updateTime":1568017397000,"remarks":null,"name":"机电D-3","parentId":6,"path":"1-6-9-","children":[{"id":10,"createTime":1568017403000,"updateTime":1568017403000,"remarks":null,"name":"机电D-3-1","parentId":9,"path":"1-6-9-10-","children":null},{"id":11,"createTime":1568017405000,"updateTime":1568017405000,"remarks":null,"name":"机电D-3-2","parentId":9,"path":"1-6-9-11-","children":null}]}],"code":200}
+2019-09-09 16:24:57.752  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 65ms
+2019-09-09 16:24:57.752  INFO 4012 --- [qtp10946087-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:25:31.484  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:25:31.485  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/getParentNodes
+2019-09-09 16:25:31.485  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.getParentNodes
+2019-09-09 16:25:31.485  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy)args=IdReq(id=6)
+2019-09-09 16:25:31.486  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:25:31.486  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:25:31.487  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:25:31.487  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:25:31.487  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/getParentNodes
+2019-09-09 16:25:31.490 TRACE 4012 --- [qtp10946087-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/getParentNodes]
+2019-09-09 16:25:31.493  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:25:31.496 TRACE 4012 --- [qtp10946087-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [6]
+2019-09-09 16:25:31.500 TRACE 4012 --- [qtp10946087-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 16:25:31.510  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":[{"id":1,"createTime":1568017306000,"updateTime":1568017306000,"remarks":null,"name":"机电","parentId":0,"path":"1-","children":null},{"id":6,"createTime":1568017384000,"updateTime":1568017384000,"remarks":null,"name":"机电D","parentId":1,"path":"1-6-","children":null}],"code":200}
+2019-09-09 16:25:31.510  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 26ms
+2019-09-09 16:25:31.510  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:25:51.176  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:25:51.176  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/getParentNodesJustIds
+2019-09-09 16:25:51.176  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.getParentNodesJustIds
+2019-09-09 16:25:51.176  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy)args=IdReq(id=6)
+2019-09-09 16:25:51.177  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:25:51.177  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:25:51.177  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:25:51.178  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:25:51.178  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/getParentNodesJustIds
+2019-09-09 16:25:51.181 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/getParentNodesJustIds]
+2019-09-09 16:25:51.183  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:25:51.186 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [6]
+2019-09-09 16:25:51.191 TRACE 4012 --- [qtp10946087-19] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 16:25:51.204  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":[1,6],"code":200}
+2019-09-09 16:25:51.204  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 28ms
+2019-09-09 16:25:51.204  INFO 4012 --- [qtp10946087-19] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:26:11.388  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:26:11.388  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/getParentNodesJustIds
+2019-09-09 16:26:11.388  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.getParentNodesJustIds
+2019-09-09 16:26:11.388  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy)args=IdReq(id=15)
+2019-09-09 16:26:11.389  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:26:11.389  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:26:11.389  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:26:11.389  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:26:11.389  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/getParentNodesJustIds
+2019-09-09 16:26:11.392 TRACE 4012 --- [qtp10946087-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/getParentNodesJustIds]
+2019-09-09 16:26:11.395  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:26:11.398 TRACE 4012 --- [qtp10946087-17] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [15]
+2019-09-09 16:26:11.405  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":[],"code":200}
+2019-09-09 16:26:11.405  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 17ms
+2019-09-09 16:26:11.405  INFO 4012 --- [qtp10946087-17] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------
+2019-09-09 16:27:36.575  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:27:36.575  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/update
+2019-09-09 16:27:36.575  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.update
+2019-09-09 16:27:36.576  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryUpdateReq(name=机电)
+2019-09-09 16:27:36.576  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:27:36.577  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:27:36.577  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:27:36.577  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:27:36.577  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/update
+2019-09-09 16:27:36.580 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/update]
+2019-09-09 16:27:36.583  INFO 4012 --- [qtp10946087-18] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:27:36.586 TRACE 4012 --- [qtp10946087-18] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 16:27:36.618  WARN 4012 --- [qtp10946087-18] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1146, SQLState: 42S02
+2019-09-09 16:27:36.618 ERROR 4012 --- [qtp10946087-18] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table 'informational_lyt.storehouse_material' doesn't exist
+2019-09-09 16:27:58.367  INFO 8024 --- [main] c.j.x.i.InformationalLytApplication      : Starting InformationalLytApplication on DESKTOP-C3BJLCD with PID 8024 (D:\github\informational-lyt\target\classes started by Administrator in D:\github\informational-lyt)
+2019-09-09 16:27:58.370  INFO 8024 --- [main] c.j.x.i.InformationalLytApplication      : No active profile set, falling back to default profiles: default
+2019-09-09 16:27:59.021  INFO 8024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-09 16:27:59.116  INFO 8024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89ms. Found 8 repository interfaces.
+2019-09-09 16:27:59.436  INFO 8024 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bfa4323f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-09 16:27:59.697  INFO 8024 --- [main] org.eclipse.jetty.util.log               : Logging initialized @2703ms to org.eclipse.jetty.util.log.Slf4jLog
+2019-09-09 16:27:59.760  INFO 8024 --- [main] o.s.b.w.e.j.JettyServletWebServerFactory : Server initialized with port: 8090
+2019-09-09 16:27:59.762  INFO 8024 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.19.v20190610; built: 2019-06-10T16:30:51.723Z; git: afcf563148970e98786327af5e07c261fda175d3; jvm 1.8.0_121-b13
+2019-09-09 16:27:59.783  INFO 8024 --- [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring embedded WebApplicationContext
+2019-09-09 16:27:59.784  INFO 8024 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1349 ms
+2019-09-09 16:27:59.878  INFO 8024 --- [main] org.eclipse.jetty.server.session         : DefaultSessionIdManager workerName=node0
+2019-09-09 16:27:59.878  INFO 8024 --- [main] org.eclipse.jetty.server.session         : No SessionScavenger set, using defaults
+2019-09-09 16:27:59.879  INFO 8024 --- [main] org.eclipse.jetty.server.session         : node0 Scavenging every 600000ms
+2019-09-09 16:27:59.885  INFO 8024 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@7545e8{application,/informational-lyt/v1,[file:///C:/Users/Administrator/AppData/Local/Temp/jetty-docbase.5769448463765087021.8090/],AVAILABLE}
+2019-09-09 16:27:59.886  INFO 8024 --- [main] org.eclipse.jetty.server.Server          : Started @2892ms
+2019-09-09 16:28:00.015  INFO 8024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-09 16:28:00.130  INFO 8024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-09 16:28:00.182  INFO 8024 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-09 16:28:00.250  INFO 8024 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-09-09 16:28:00.252  INFO 8024 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-09 16:28:00.389  INFO 8024 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-09 16:28:00.561  INFO 8024 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-09-09 16:28:01.340  INFO 8024 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-09 16:28:02.679  INFO 8024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-09 16:28:02.901  INFO 8024 --- [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-09 16:28:02.902  INFO 8024 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-09 16:28:02.909  INFO 8024 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-09-09 16:28:02.930  INFO 8024 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@645b43{HTTP/1.1,[http/1.1]}{0.0.0.0:8090}
+2019-09-09 16:28:02.933  INFO 8024 --- [main] o.s.b.web.embedded.jetty.JettyWebServer  : Jetty started on port(s) 8090 (http/1.1) with context path '/informational-lyt/v1'
+2019-09-09 16:28:02.940  INFO 8024 --- [main] c.j.x.i.InformationalLytApplication      : Started InformationalLytApplication in 5.129 seconds (JVM running for 5.946)
+2019-09-09 16:29:37.953  INFO 8024 --- [qtp31736455-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- Request start -----------------------------
+2019-09-09 16:29:37.953  INFO 8024 --- [qtp31736455-20] c.j.x.i.publish.utils.LogUtil            : (joy) Request url: /informational-lyt/v1/storehouse-material-category/update
+2019-09-09 16:29:37.955  INFO 8024 --- [qtp31736455-20] c.j.x.i.publish.utils.LogUtil            : (joy)请求方法: com.joy.xxfy.informationallyt.module.storehouse.web.MaterialCategoryController.update
+2019-09-09 16:29:37.955  INFO 8024 --- [qtp31736455-20] c.j.x.i.publish.utils.LogUtil            : (joy)args=MaterialCategoryUpdateReq(name=机电大类别)
+2019-09-09 16:29:37.993  INFO 8024 --- [qtp31736455-20] c.j.x.i.publish.utils.LogUtil            : 登陆状态：已登录
+2019-09-09 16:29:37.993  INFO 8024 --- [qtp31736455-20] c.j.x.i.publish.utils.LogUtil            : (joy) 登录名：admin
+2019-09-09 16:29:37.994  INFO 8024 --- [qtp31736455-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户类型：CP_ADMIN
+2019-09-09 16:29:37.994  INFO 8024 --- [qtp31736455-20] c.j.x.i.publish.utils.LogUtil            : (joy) 用户权限：null
+2019-09-09 16:29:37.994  INFO 8024 --- [qtp31736455-20] c.j.x.i.publish.utils.LogUtil            : (joy) 资源URL：storehouse-material-category/update
+2019-09-09 16:29:38.021  INFO 8024 --- [qtp31736455-20] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-09-09 16:29:38.138 TRACE 8024 --- [qtp31736455-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [storehouse-material-category/update]
+2019-09-09 16:29:38.147  INFO 8024 --- [qtp31736455-20] c.j.x.i.publish.utils.LogUtil            : 权限认证结果：系统还未配置该资源的信息，允许访问.
+2019-09-09 16:29:38.167 TRACE 8024 --- [qtp31736455-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2019-09-09 16:29:38.193 TRACE 8024 --- [qtp31736455-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [0]
+2019-09-09 16:29:38.193 TRACE 8024 --- [qtp31736455-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [机电大类别]
+2019-09-09 16:29:38.243 TRACE 8024 --- [qtp31736455-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [2019-09-09 16:21:46.0]
+2019-09-09 16:29:38.250 TRACE 8024 --- [qtp31736455-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CLOB] - [null]
+2019-09-09 16:29:38.253 TRACE 8024 --- [qtp31736455-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [TIMESTAMP] - [Mon Sep 09 00:00:00 CST 2019]
+2019-09-09 16:29:38.253 TRACE 8024 --- [qtp31736455-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [机电大类别]
+2019-09-09 16:29:38.254 TRACE 8024 --- [qtp31736455-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [BIGINT] - [0]
+2019-09-09 16:29:38.254 TRACE 8024 --- [qtp31736455-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [CLOB] - [1-]
+2019-09-09 16:29:38.255 TRACE 8024 --- [qtp31736455-20] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [BIGINT] - [1]
+2019-09-09 16:29:38.277  INFO 8024 --- [qtp31736455-20] c.j.x.i.publish.utils.LogUtil            : (joy) 返回结果: {"state":true,"message":"操作成功","detailMessage":"","data":{"id":1,"createTime":1568017306000,"updateTime":1567958400000,"remarks":null,"name":"机电大类别","parentId":0,"path":"1-","children":null},"code":200}
+2019-09-09 16:29:38.277  INFO 8024 --- [qtp31736455-20] c.j.x.i.publish.utils.LogUtil            : (joy) 耗费时间: 325ms
+2019-09-09 16:29:38.277  INFO 8024 --- [qtp31736455-20] c.j.x.i.publish.utils.LogUtil            : ----------------------------- 请求结束 -----------------------------

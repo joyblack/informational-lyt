@@ -8,6 +8,7 @@ public enum Notice{
     IMPORT_FILE_IS_NULL("导入文件为空", 240),
     NAME_ALREADY_EXIST("名称已存在", 241),
     DATA_NOT_EXIST("数据信息不存在", 242),
+    PARENT_DATA_NOT_EXIST("父节点数据信息不存在", 243),
     DATA_IN_USED_CANT_BE_DELETE("该数据正在使用中，不允许删除。", 299),
 
     // 公共模块

@@ -1,5 +1,6 @@
 package com.joy.xxfy.informationallyt.publish.utils.project;
 
+import com.joy.xxfy.informationallyt.module.storehouse.domain.entity.MaterialCategoryEntity;
 import com.joy.xxfy.informationallyt.module.system.domain.entity.DepartmentEntity;
 import com.joy.xxfy.informationallyt.module.system.domain.entity.ResourceEntity;
 import com.joy.xxfy.informationallyt.publish.utils.JoyBeanUtil;
@@ -42,6 +43,26 @@ public class TreeUtil {
                 ResourceEntity scopeMode = new ResourceEntity();
                 JoyBeanUtil.copyPropertiesIgnoreSourceNullProperties(entity,scopeMode);
                 temp = getResourcesTree(list,entity.getId());
+                if(temp.size() > 0){
+                    scopeMode.setChildren(temp);
+                }
+                result.add(scopeMode);
+            }
+        }
+        return result;
+    }
+
+    /**
+     * 获取材料类型树
+     */
+    public static List<MaterialCategoryEntity> getMaterialCategoryTree(List<MaterialCategoryEntity> list, Long pid) {
+        List<MaterialCategoryEntity> result =  new ArrayList<>();
+        List<MaterialCategoryEntity> temp;
+        for(MaterialCategoryEntity entity : list){
+            if(entity.getParentId().equals(pid)){
+                MaterialCategoryEntity scopeMode = new MaterialCategoryEntity();
+                JoyBeanUtil.copyPropertiesIgnoreSourceNullProperties(entity,scopeMode);
+                temp = getMaterialCategoryTree(list, entity.getId());
                 if(temp.size() > 0){
                     scopeMode.setChildren(temp);
                 }
