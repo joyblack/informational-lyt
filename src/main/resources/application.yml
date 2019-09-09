@@ -1,0 +1,66 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /informational-lyt/v1/
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/informational_lyt?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: GMT+8
+
+  transaction:
+    rollback-on-commit-failure: true
+
+  http:
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+jwtparam:
+  issuer: ec8b63c05f999a15a8c8567002a560a8
+  audience: 541bee7d2a922cc0a81ff4ca3c23f4af
+  TTLMillis: 360000000
+  base64Security: JXU4RDM1JXU3MTY0JXU4QkJFJXU4QkEx1
+
+logging:
+  level:
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.springframework.web: info
+  file: joy-black.log
+# client config.
+system:
+  config:
+    user-default-password: 123456
+    staff-black-list-over-month: 6
+  # upload config
+  upload:
+    store-path: E:&&informational_dxn
+    image-format: jpg;JPG;bmp;BMP;png;PNG
+  # initial config
+  initial:
+    company-name: ¬Ã”≥Ã¡π‹¿Ì
+    super-admin-default-name: admin
+    super-admin-default-password: 123456
+    

@@ -1,0 +1,32 @@
+2019-09-09 15:29:38.725  INFO 12532 --- [main] c.j.x.i.InformationalLytApplication      : Starting InformationalLytApplication on DESKTOP-C3BJLCD with PID 12532 (D:\github\informational-lyt\target\classes started by Administrator in D:\github\informational-lyt)
+2019-09-09 15:29:38.729  INFO 12532 --- [main] c.j.x.i.InformationalLytApplication      : No active profile set, falling back to default profiles: default
+2019-09-09 15:29:39.838  INFO 12532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-09 15:29:39.931  INFO 12532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84ms. Found 7 repository interfaces.
+2019-09-09 15:29:40.255  INFO 12532 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2da0bc31] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-09 15:29:40.514  INFO 12532 --- [main] org.eclipse.jetty.util.log               : Logging initialized @3114ms to org.eclipse.jetty.util.log.Slf4jLog
+2019-09-09 15:29:40.579  INFO 12532 --- [main] o.s.b.w.e.j.JettyServletWebServerFactory : Server initialized with port: 8090
+2019-09-09 15:29:40.582  INFO 12532 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.19.v20190610; built: 2019-06-10T16:30:51.723Z; git: afcf563148970e98786327af5e07c261fda175d3; jvm 1.8.0_121-b13
+2019-09-09 15:29:40.610  INFO 12532 --- [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring embedded WebApplicationContext
+2019-09-09 15:29:40.610  INFO 12532 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1803 ms
+2019-09-09 15:29:40.702  INFO 12532 --- [main] org.eclipse.jetty.server.session         : DefaultSessionIdManager workerName=node0
+2019-09-09 15:29:40.702  INFO 12532 --- [main] org.eclipse.jetty.server.session         : No SessionScavenger set, using defaults
+2019-09-09 15:29:40.703  INFO 12532 --- [main] org.eclipse.jetty.server.session         : node0 Scavenging every 600000ms
+2019-09-09 15:29:40.709  INFO 12532 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@1667cb3{application,/informational-lyt/v1,[file:///C:/Users/Administrator/AppData/Local/Temp/jetty-docbase.1248094514535720427.8090/],AVAILABLE}
+2019-09-09 15:29:40.710  INFO 12532 --- [main] org.eclipse.jetty.server.Server          : Started @3310ms
+2019-09-09 15:29:40.829  INFO 12532 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-09 15:29:40.940  INFO 12532 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-09 15:29:41.036  INFO 12532 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-09 15:29:41.124  INFO 12532 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-09-09 15:29:41.126  INFO 12532 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-09 15:29:41.243  INFO 12532 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-09 15:29:41.379  INFO 12532 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-09-09 15:29:42.144  INFO 12532 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-09 15:29:43.204  INFO 12532 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-09 15:29:43.443  INFO 12532 --- [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-09-09 15:29:43.443  INFO 12532 --- [main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-09-09 15:29:43.452  INFO 12532 --- [main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-09-09 15:29:43.475  INFO 12532 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@380628{HTTP/1.1,[http/1.1]}{0.0.0.0:8090}
+2019-09-09 15:29:43.478  INFO 12532 --- [main] o.s.b.web.embedded.jetty.JettyWebServer  : Jetty started on port(s) 8090 (http/1.1) with context path '/informational-lyt/v1'
+2019-09-09 15:29:43.479  INFO 12532 --- [main] c.j.x.i.InformationalLytApplication      : Started InformationalLytApplication in 5.348 seconds (JVM running for 6.079)
