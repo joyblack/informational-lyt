@@ -1,10 +1,10 @@
 package com.joy.xxfy.informationallyt.module.storehouse.web;
 
 import com.joy.xxfy.informationallyt.module.common.web.req.IdReq;
-import com.joy.xxfy.informationallyt.module.storehouse.service.StorehouseInfoService;
-import com.joy.xxfy.informationallyt.module.storehouse.web.req.StorehouseInfoAddReq;
-import com.joy.xxfy.informationallyt.module.storehouse.web.req.StorehouseInfoGetListReq;
-import com.joy.xxfy.informationallyt.module.storehouse.web.req.StorehouseInfoUpdateReq;
+import com.joy.xxfy.informationallyt.module.storehouse.service.SupplierService;
+import com.joy.xxfy.informationallyt.module.storehouse.web.req.ManufacturerAddReq;
+import com.joy.xxfy.informationallyt.module.storehouse.web.req.ManufacturerGetListReq;
+import com.joy.xxfy.informationallyt.module.storehouse.web.req.ManufacturerUpdateReq;
 import com.joy.xxfy.informationallyt.publish.result.JoyResult;
 import com.joy.xxfy.informationallyt.publish.result.Notice;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("storehouse-info")
-public class StorehouseInfoController{
+@RequestMapping("gm-supplier")
+public class SupplierController {
 
     @Autowired
-    private StorehouseInfoService storehouseInfoService;
+    private SupplierService supplierService;
 
     /**
      * 添加
@@ -29,11 +29,11 @@ public class StorehouseInfoController{
     @PostMapping(
             value = "/add",
             produces = {"application/json;charset=UTF-8"})
-    public JoyResult add(@RequestBody @Valid StorehouseInfoAddReq req, BindingResult bindingResult) {
+    public JoyResult add(@RequestBody @Valid ManufacturerAddReq req, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            return storehouseInfoService.add(req);
+            return supplierService.add(req);
         }
     }
 
@@ -47,7 +47,7 @@ public class StorehouseInfoController{
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            return storehouseInfoService.delete(idRequest.getId());
+            return supplierService.delete(idRequest.getId());
         }
     }
 
@@ -61,7 +61,7 @@ public class StorehouseInfoController{
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            return storehouseInfoService.get(idRequest.getId());
+            return supplierService.get(idRequest.getId());
         }
     }
 
@@ -71,11 +71,11 @@ public class StorehouseInfoController{
     @PostMapping(
             value = "/update",
             produces = {"application/json;charset=UTF-8"})
-    public JoyResult update(@RequestBody @Valid StorehouseInfoUpdateReq req, BindingResult bindingResult) {
+    public JoyResult update(@RequestBody @Valid ManufacturerUpdateReq req, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            return storehouseInfoService.update(req);
+            return supplierService.update(req);
         }
     }
 
@@ -86,11 +86,11 @@ public class StorehouseInfoController{
     @RequestMapping(
             value = "getAllList",
             produces = {"application/json;charset=UTF-8"})
-    public JoyResult getAllList(@RequestBody @Valid StorehouseInfoGetListReq req, BindingResult bindingResult) {
+    public JoyResult getAllList(@RequestBody @Valid ManufacturerGetListReq req, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            return storehouseInfoService.getAllList(req);
+            return supplierService.getAllList(req);
         }
     }
 
@@ -100,11 +100,11 @@ public class StorehouseInfoController{
     @RequestMapping(
             value = "getPagerList",
             produces = {"application/json;charset=UTF-8"})
-    public JoyResult getPagerList(@RequestBody @Valid StorehouseInfoGetListReq req, BindingResult bindingResult) {
+    public JoyResult getPagerList(@RequestBody @Valid ManufacturerGetListReq req, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            return storehouseInfoService.getPagerList(req);
+            return supplierService.getPagerList(req);
         }
     }
 

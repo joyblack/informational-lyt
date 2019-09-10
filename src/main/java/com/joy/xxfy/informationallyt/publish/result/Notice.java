@@ -36,36 +36,14 @@ public enum Notice{
     DEPARTMENT_NAME_ALREADY_EXIST("部门名称已存在", 102002),
     COMPANY_NOT_EXIST("平台/公司信息不存在",102003),
 
+    // 库存
+    MATERIAL_CATEGORY_NOT_EXIST("材料类别信息不存在",10300),
+    SUPPLIER_NOT_EXIST("供货商信息不存在",10301),
+    STOREHOUSE_NOT_EXIST("仓库信息不存在",10300),
 
 
-    STAFF_ALREADY_IN_DEPARTMENT("员工已经存在于此部门下", 103001),
 
-    // store
-    STOREHOUSE_NOT_EXIST("仓库信息不存在", 105000),
-    STOREHOUSE_NAME_ALREADY_EXIST("仓库名称已存在", 105001),
-
-
-    // 安全
-    SAFE_INSPECTION_NOT_EXIST("安全巡检信息不存在", 112000),
-    SAFE_INSPECTION_ALREADY_EXIST("安全巡检信息已存在", 112001),
-    VIOLATION_NOT_EXIST("违章信息不存在", 112002),
-
-    // 设备
-    DEVICE_CATEGORY_PARENT_NOT_EXIST("父设备类型信息不存在", 113000),
-    DEVICE_CATEGORY_NOT_EXIST("设备类型信息不存在", 113001),
-    DEVICE_CATEGORY_ALREADY_EXIST("设备类型信息已存在", 113002),
-    DEVICE_CATEGORY_NAME_EXIST("设备类型名称已存在", 113003),
-    DEVICE_INFO_ALREADY_EXIST("设备信息已存在", 113004),
-    DEVICE_INFO_NOT_EXIST("设备信息不存在", 113005),
-    DEVICE_INFO_NAME_NOT_EXIST("设备名称不存在", 113006),
-
-    DEVICE_MAINTAIN_ALREADY_EXIST("设备维保信息已存在", 113007),
-    DEVICE_MAINTAIN_NOT_EXIST("设备维保信息不存在", 113008),
-
-    // file
-    UPLOAD_FILE_IS_NULL("上传文件为空", 108000),
     UPLOAD_FILE_ERROR("上传文件错误", 108001),
-    UPLOAD_FILE_FAILED("上传文件失败", 108002),
     UPLOAD_FILE_TYPE_ERROR("文件类型错误", 108003),
 
 

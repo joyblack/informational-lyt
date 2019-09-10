@@ -1,16 +1,16 @@
 package com.joy.xxfy.informationallyt.module.storehouse.service;
 
-import com.joy.xxfy.informationallyt.module.storehouse.domain.entity.StorehouseInfoEntity;
-import com.joy.xxfy.informationallyt.module.storehouse.domain.repository.StorehouseInfoRepository;
-import com.joy.xxfy.informationallyt.module.storehouse.web.req.StorehouseInfoAddReq;
-import com.joy.xxfy.informationallyt.module.storehouse.web.req.StorehouseInfoGetListReq;
-import com.joy.xxfy.informationallyt.module.storehouse.web.req.StorehouseInfoUpdateReq;
+import com.joy.xxfy.informationallyt.module.storehouse.domain.entity.SupplierEntity;
+import com.joy.xxfy.informationallyt.module.storehouse.domain.repository.SupplierRepository;
+import com.joy.xxfy.informationallyt.module.storehouse.web.req.ManufacturerAddReq;
+import com.joy.xxfy.informationallyt.module.storehouse.web.req.ManufacturerGetListReq;
+import com.joy.xxfy.informationallyt.module.storehouse.web.req.ManufacturerUpdateReq;
 import com.joy.xxfy.informationallyt.publish.constant.ResultDataConstant;
 import com.joy.xxfy.informationallyt.publish.result.JoyResult;
 import com.joy.xxfy.informationallyt.publish.result.Notice;
 import com.joy.xxfy.informationallyt.publish.utils.JoyBeanUtil;
-import com.joy.xxfy.informationallyt.publish.utils.StringUtil;
 import com.joy.xxfy.informationallyt.publish.utils.JpaPagerUtil;
+import com.joy.xxfy.informationallyt.publish.utils.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
@@ -22,35 +22,35 @@ import java.util.List;
 
 @Transactional
 @Service
-public class StorehouseInfoService {
+public class SupplierService {
 
     @Autowired
-    private StorehouseInfoRepository storehouseInfoRepository;
+    private SupplierRepository supplierRepository;
 
     /**
      * 添加
      */
-    public JoyResult add(StorehouseInfoAddReq req) {
+    public JoyResult add(ManufacturerAddReq req) {
         // 验证名称是否重复
-        StorehouseInfoEntity checkInfo = storehouseInfoRepository.findFirstByName(req.getName());
+        SupplierEntity checkInfo = supplierRepository.findFirstByName(req.getName());
         if(checkInfo != null){
             return JoyResult.buildFailedResult(Notice.NAME_ALREADY_EXIST);
         }
         // copy properties
-        StorehouseInfoEntity info = new StorehouseInfoEntity();
+        SupplierEntity info = new SupplierEntity();
         JoyBeanUtil.copyPropertiesIgnoreSourceNullProperties(req, info);
-        return JoyResult.buildSuccessResultWithData(storehouseInfoRepository.save(info));
+        return JoyResult.buildSuccessResultWithData(supplierRepository.save(info));
     }
 
     /**
      * 删除
      */
     public JoyResult delete(Long id) {
-        StorehouseInfoEntity info = storehouseInfoRepository.findAllById(id);
+        SupplierEntity info = supplierRepository.findAllById(id);
         if(info == null){
             return JoyResult.buildFailedResult(Notice.DATA_NOT_EXIST);
         }
-        storehouseInfoRepository.deleteById(id);
+        supplierRepository.deleteById(id);
         return JoyResult.buildSuccessResultWithData(JoyResult.buildSuccessResult(ResultDataConstant.MESSAGE_DELETE_SUCCESS));
     }
 
@@ -58,20 +58,20 @@ public class StorehouseInfoService {
      * 获取数据(id)
      */
     public JoyResult get(Long id) {
-        return JoyResult.buildSuccessResultWithData(storehouseInfoRepository.findAllById(id));
+        return JoyResult.buildSuccessResultWithData(supplierRepository.findAllById(id));
     }
 
 
     /**
      * 更新
      */
-    public JoyResult update(StorehouseInfoUpdateReq req) {
-        StorehouseInfoEntity info = storehouseInfoRepository.findAllById(req.getId());
+    public JoyResult update(ManufacturerUpdateReq req) {
+        SupplierEntity info = supplierRepository.findAllById(req.getId());
         if(info == null){
             return JoyResult.buildFailedResult(Notice.DATA_NOT_EXIST);
         }
         // 验证名称是否重复
-        StorehouseInfoEntity checkInfo = storehouseInfoRepository.findFirstByName(req.getName());
+        SupplierEntity checkInfo = supplierRepository.findFirstByName(req.getName());
         if(checkInfo != null && !checkInfo.getId().equals(info.getId())){
             return JoyResult.buildFailedResult(Notice.NAME_ALREADY_EXIST);
         }
@@ -80,44 +80,43 @@ public class StorehouseInfoService {
         JoyBeanUtil.copyPropertiesIgnoreSourceNullProperties(req, info);
 
         // save.
-        return JoyResult.buildSuccessResultWithData(storehouseInfoRepository.save(info));
+        return JoyResult.buildSuccessResultWithData(supplierRepository.save(info));
     }
 
     /**
      * 获取分页数据
      */
-    public JoyResult getPagerList(StorehouseInfoGetListReq req) {
-        return JoyResult.buildSuccessResultWithData(storehouseInfoRepository.findAll(getPredicates(req), JpaPagerUtil.getPageable(req)));
+    public JoyResult getPagerList(ManufacturerGetListReq req) {
+        return JoyResult.buildSuccessResultWithData(supplierRepository.findAll(getPredicates(req), JpaPagerUtil.getPageable(req)));
     }
 
     /**
      * 获取全部
      */
-    public JoyResult getAllList(StorehouseInfoGetListReq req) {
-        return JoyResult.buildSuccessResultWithData(storehouseInfoRepository.findAll(getPredicates(req)));
+    public JoyResult getAllList(ManufacturerGetListReq req) {
+        return JoyResult.buildSuccessResultWithData(supplierRepository.findAll(getPredicates(req)));
     }
 
     /**
      * 获取分页数据、全部数据的谓词条件
      */
-    private Specification<StorehouseInfoEntity> getPredicates(StorehouseInfoGetListReq req){
-        return (Specification<StorehouseInfoEntity>) (root, query, builder) -> {
+    private Specification<SupplierEntity> getPredicates(ManufacturerGetListReq req){
+        return (Specification<SupplierEntity>) (root, query, builder) -> {
             List<Predicate> predicates = new ArrayList<>();
             if(!StringUtil.isEmpty(req.getName())){
                 predicates.add(builder.like(root.get("name"), "%" + req.getName() +"%"));
             }
-            if(!StringUtil.isEmpty(req.getAdmin())){
-                predicates.add(builder.like(root.get("admin"), "%" + req.getAdmin() +"%"));
+            if(!StringUtil.isEmpty(req.getBusiness())){
+                predicates.add(builder.like(root.get("business"), "%" + req.getBusiness() +"%"));
             }
-            if(!StringUtil.isEmpty(req.getResponsePeople())){
-                predicates.add(builder.like(root.get("responsePeople"), "%" + req.getResponsePeople() +"%"));
+            if(!StringUtil.isEmpty(req.getContactPeople())){
+                predicates.add(builder.like(root.get("contactPeople"), "%" + req.getContactPeople() +"%"));
+            }
+            if(!StringUtil.isEmpty(req.getContactPhone())){
+                predicates.add(builder.like(root.get("contactPhone"), "%" + req.getContactPhone() +"%"));
             }
             if(!StringUtil.isEmpty(req.getCode())){
                 predicates.add(builder.like(root.get("code"), "%" + req.getCode() +"%"));
-            }
-
-            if(req.getStatus() != null){
-                predicates.add(builder.equal(root.get("status"), req.getStatus()));
             }
             return builder.and(predicates.toArray(new Predicate[predicates.size()]));
         };

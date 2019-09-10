@@ -11,7 +11,7 @@ import java.io.Serializable;
 
 @Data
 @ToString(callSuper = true)
-public class StorehouseInfoDefault{
+public class StorehouseDefault{
 
     /**
      * 仓库状态

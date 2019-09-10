@@ -1,7 +1,7 @@
 # 简介
 
 # 访问地址
-storehouse-info/get
+gm-storehouse/get
 
 # 请求参数
 

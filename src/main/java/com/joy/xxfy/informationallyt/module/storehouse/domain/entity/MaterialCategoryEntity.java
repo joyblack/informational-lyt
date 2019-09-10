@@ -12,7 +12,7 @@ import java.util.List;
  * 材料类别
  */
 @Entity
-@Table(name = "storehouse_material_category")
+@Table(name = "gm_material_category")
 @Data
 @ToString(callSuper = true)
 public class MaterialCategoryEntity extends BaseEntity {

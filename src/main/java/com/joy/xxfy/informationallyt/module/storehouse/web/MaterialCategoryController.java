@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("storehouse-material-category")
+@RequestMapping("gm-material-category")
 public class MaterialCategoryController {
     @Autowired
     private MaterialCategoryService materialCategoryService;

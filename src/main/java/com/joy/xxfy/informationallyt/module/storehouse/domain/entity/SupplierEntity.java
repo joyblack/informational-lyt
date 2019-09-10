@@ -10,13 +10,13 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
- * 厂家
+ * 供货商
  */
 @Data
 @ToString(callSuper = true)
 @Entity
-@Table(name = "storehouse_manufacturer")
-public class ManufacturerEntity extends BaseEntity implements Serializable{
+@Table(name = "gm_supplier")
+public class SupplierEntity extends BaseEntity implements Serializable{
 
     private static final long serialVersionUID = 6497537507608581615L;
 

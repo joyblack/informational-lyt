@@ -6,10 +6,9 @@ import com.joy.xxfy.informationallyt.module.common.enums.YesEnum;
 import lombok.Data;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 /**
  * 仓库
@@ -17,8 +16,8 @@ import java.io.Serializable;
 @Data
 @ToString(callSuper = true)
 @Entity
-@Table(name = "storehouse_info")
-public class StorehouseInfoEntity extends BaseEntity implements Serializable {
+@Table(name = "gm_storehouse")
+public class StorehouseEntity extends BaseEntity implements Serializable {
     private static final long serialVersionUID = -854264746744904798L;
 
     /**
@@ -56,4 +55,5 @@ public class StorehouseInfoEntity extends BaseEntity implements Serializable {
      */
     @Column(nullable = false)
     private YesEnum isDefault;
+
 }
