@@ -38,6 +38,11 @@ public class JoyException extends RuntimeException {
         this.errorMessage = JoyResult.buildFailedResult(notice);
     }
 
+    public JoyException(Notice notice, String detailMessage) {
+        super(detailMessage);
+        this.errorMessage = JoyResult.buildFailedResult(notice);
+    }
+
     public JoyException(Throwable cause) {
         super(cause);
         this.errorMessage = JoyResult.buildFailedResult(cause.getMessage());

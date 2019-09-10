@@ -1,7 +1,7 @@
 # 简介
 
 # 访问地址
-gm-material-category/get
+gm-supplier/get
 
 # 请求参数
 
@@ -19,7 +19,7 @@ JSON
 ## 请求示例
 ```json
 {
-    "id": 8
+    "id": 6
 }
 ```
 
@@ -31,14 +31,15 @@ JSON
     "message": "操作成功",
     "detailMessage": "",
     "data": {
-        "id": 8,
+        "id": 6,
         "createTime": "2019-09-09",
         "updateTime": "2019-09-09",
-        "remarks": null,
-        "name": "机电D-2",
-        "parentId": 6,
-        "path": "1-6-8-",
-        "children": null
+        "remarks": "aiyo,zhangfei!!",
+        "name": "塑料厂E_changes",
+        "code": "001-A",
+        "business": "出售有机塑料",
+        "contactPeople": "张飞",
+        "contactPhone": null
     },
     "code": 200
 }

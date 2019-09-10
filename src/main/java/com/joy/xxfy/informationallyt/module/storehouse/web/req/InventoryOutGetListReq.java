@@ -1,19 +1,15 @@
 package com.joy.xxfy.informationallyt.module.storehouse.web.req;
 
-import com.joy.xxfy.informationallyt.module.common.web.req.BaseAddReq;
 import com.joy.xxfy.informationallyt.module.common.web.req.BasePageReq;
 import lombok.Data;
 import lombok.ToString;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 
 @Data
 @ToString
-public class InventoryInGetListReq extends BasePageReq {
+public class InventoryOutGetListReq extends BasePageReq {
 
     /**
      * 材料名称
@@ -39,20 +35,20 @@ public class InventoryInGetListReq extends BasePageReq {
 
 
     /**
-     * 入库仓库ID
+     * 出库仓库ID
      */
     private Long storehouseId;
 
 
     /**
-     * 入库时间区间
+     * 出库时间区间
      */
-    private Date inDateStart;
-    private Date inDateEnd;
+    private Date outDateStart;
+    private Date outDateEnd;
 
     /**
-     * 签收人
+     * 领用班组
      */
-    private String signPeople;
+    private String usedTeam;
 
 }

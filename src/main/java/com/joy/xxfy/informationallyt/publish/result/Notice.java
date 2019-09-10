@@ -39,7 +39,10 @@ public enum Notice{
     // 库存
     MATERIAL_CATEGORY_NOT_EXIST("材料类别信息不存在",10300),
     SUPPLIER_NOT_EXIST("供货商信息不存在",10301),
-    STOREHOUSE_NOT_EXIST("仓库信息不存在",10300),
+    STOREHOUSE_NOT_EXIST("仓库信息不存在",10302),
+    MATERIAL_NOT_EXIST("材料信息不存在",10303),
+    INVENTORY_NOT_EXIST("库存信息不存在",10304),
+    INVENTORY_AMOUNT_NOT_ENOUGH("库存不足",10305),
 
 
 

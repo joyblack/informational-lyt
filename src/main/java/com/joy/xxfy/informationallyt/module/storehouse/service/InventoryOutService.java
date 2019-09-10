@@ -8,6 +8,8 @@ import com.joy.xxfy.informationallyt.module.storehouse.domain.entity.*;
 import com.joy.xxfy.informationallyt.module.storehouse.domain.repository.*;
 import com.joy.xxfy.informationallyt.module.storehouse.web.req.InventoryInAddReq;
 import com.joy.xxfy.informationallyt.module.storehouse.web.req.InventoryInGetListReq;
+import com.joy.xxfy.informationallyt.module.storehouse.web.req.InventoryOutAddReq;
+import com.joy.xxfy.informationallyt.module.storehouse.web.req.InventoryOutGetListReq;
 import com.joy.xxfy.informationallyt.publish.constant.ResultDataConstant;
 import com.joy.xxfy.informationallyt.publish.exception.JoyException;
 import com.joy.xxfy.informationallyt.publish.result.JoyResult;
@@ -31,13 +33,13 @@ import java.util.List;
 
 @Service
 @Transactional
-public class InventoryInService {
+public class InventoryOutService {
 
     @Autowired
     private InventoryRepository inventoryRepository;
 
     @Autowired
-    private InventoryInRepository inventoryInRepository;
+    private InventoryOutRepository inventoryOutRepository;
 
     @Autowired
     private MaterialRepository materialRepository;
@@ -52,11 +54,11 @@ public class InventoryInService {
     private StorehouseRepository storehouseRepository;
 
     /**
-     * 入库
+     * 出库
      */
-    public JoyResult add(InventoryInAddReq req){
+    public JoyResult add(InventoryOutAddReq req){
         /**
-         * 获取本次入库所需的基本数据信息：类别、供货商、仓库
+         * 获取本次出库所需的基本数据信息：类别、供货商、仓库
          */
         // 类别信息
         MaterialCategoryEntity materialCategory = materialCategoryRepository.findAllById(req.getMaterialCategoryId());
@@ -73,60 +75,44 @@ public class InventoryInService {
         if(storehouse == null){
             return JoyResult.buildFailedResult(Notice.STOREHOUSE_NOT_EXIST);
         }
-        /**
-         * 处理材料的总库存信息
-         * 若不存在，新建材料。
-         */
+        // 是否存在材料信息
         MaterialEntity material = materialRepository.findFirstByNameAndModelNumberAndSupplier(req.getName(), req.getModelNumber(), supplier);
         if(material == null){
-            material = new MaterialEntity();
-            // 总量即为本次入库总量
-            material.setAmount(req.getInNumber());
-            material.setMaterialCategory(materialCategory);
-            material.setName(req.getName());
-            material.setModelNumber(req.getModelNumber());
-            material.setSupplier(supplier);
-        }else{
-            material.setAmount(material.getAmount() + req.getInNumber());
+            return JoyResult.buildFailedResult(Notice.MATERIAL_NOT_EXIST);
         }
+        // 检测库存是否足够
+        InventoryEntity inventory = inventoryRepository.findFirstByStorehouseAndMaterial(storehouse, material);
+        if(inventory == null){
+            return JoyResult.buildFailedResult(Notice.INVENTORY_NOT_EXIST);
+        }
+        if(inventory.getAmount() < req.getOutNumber()){
+            return JoyResult.buildFailedResult(Notice.INVENTORY_AMOUNT_NOT_ENOUGH,"仓库【"+ storehouse.getName()  +"】中材料【" + material.getName() + "】库存不足，剩余: " + inventory.getAmount() + "，小于出库量: " + req.getOutNumber());
+        }
+
+        // 修改材料：总数信息
+        material.setAmount(material.getAmount() - req.getOutNumber());
         material = materialRepository.save(material);
 
-        /**
-         * 修改库存信息，新增入库数量
-         * 若不存在，新建库存信息
-         */
-        InventoryEntity inventoryEntity = inventoryRepository.findFirstByStorehouseAndMaterial(storehouse, material);
-        if(inventoryEntity == null){
-            inventoryEntity = new InventoryEntity();
-            inventoryEntity.setAmount(req.getInNumber());
-            inventoryEntity.setMaterial(material);
-            inventoryEntity.setStorehouse(storehouse);
-        }else{
-            inventoryEntity.setAmount(inventoryEntity.getAmount() + req.getInNumber());
-        }
-        inventoryRepository.save(inventoryEntity);
+        // 修改库存: 库存信息
+        inventory.setAmount(inventory.getAmount() - req.getOutNumber());
+        inventoryRepository.save(inventory);
 
-        /**
-         * 记录入库日志
-         */
-        InventoryInEntity log = new InventoryInEntity();
+        // 记录出库日志
+        InventoryOutEntity log = new InventoryOutEntity();
         // 一些可直接copy的信息
         JoyBeanUtil.copyPropertiesIgnoreSourceNullProperties(req, log);
         // 材料
         log.setMaterial(material);
         // 仓库
         log.setStorehouse(storehouse);
-        return JoyResult.buildSuccessResultWithData(inventoryInRepository.save(log));
+        return JoyResult.buildSuccessResultWithData(inventoryOutRepository.save(log));
     }
 
     /**
-     * 批量入库
+     * 批量出库
      */
-    public JoyResult batchAdd(ValidList<InventoryInAddReq> reqs){
-        for (InventoryInAddReq req : reqs) {
-            /**
-             * 获取本次入库所需的基本数据信息：类别、供货商、仓库
-             */
+    public JoyResult batchAdd(ValidList<InventoryOutAddReq> reqs){
+        for (InventoryOutAddReq req : reqs) {
             // 类别信息
             MaterialCategoryEntity materialCategory = materialCategoryRepository.findAllById(req.getMaterialCategoryId());
             if(materialCategory == null){
@@ -142,50 +128,37 @@ public class InventoryInService {
             if(storehouse == null){
                 throw new JoyException(Notice.STOREHOUSE_NOT_EXIST);
             }
-            /**
-             * 处理材料的总库存信息
-             * 若不存在，新建材料。
-             */
+            // 是否存在材料信息
             MaterialEntity material = materialRepository.findFirstByNameAndModelNumberAndSupplier(req.getName(), req.getModelNumber(), supplier);
             if(material == null){
-                material = new MaterialEntity();
-                // 总量即为本次入库总量
-                material.setAmount(req.getInNumber());
-                material.setMaterialCategory(materialCategory);
-                material.setName(req.getName());
-                material.setModelNumber(req.getModelNumber());
-                material.setSupplier(supplier);
-            }else{
-                material.setAmount(material.getAmount() + req.getInNumber());
+                throw new JoyException(Notice.MATERIAL_NOT_EXIST);
             }
+            // 检测库存是否足够
+            InventoryEntity inventory = inventoryRepository.findFirstByStorehouseAndMaterial(storehouse, material);
+            if(inventory == null){
+                throw new JoyException(Notice.INVENTORY_NOT_EXIST);
+            }
+            if(inventory.getAmount() < req.getOutNumber()){
+                throw new JoyException("仓库【"+ storehouse.getName()  +"】中材料【" + material.getName() + "】库存不足，剩余: " + inventory.getAmount() + "，小于出库量: " + req.getOutNumber());
+            }
+
+            // 修改材料：总数信息
+            material.setAmount(material.getAmount() - req.getOutNumber());
             material = materialRepository.save(material);
 
-            /**
-             * 修改库存信息，新增入库数量
-             * 若不存在，新建库存信息
-             */
-            InventoryEntity inventoryEntity = inventoryRepository.findFirstByStorehouseAndMaterial(storehouse, material);
-            if(inventoryEntity == null){
-                inventoryEntity = new InventoryEntity();
-                inventoryEntity.setAmount(req.getInNumber());
-                inventoryEntity.setMaterial(material);
-                inventoryEntity.setStorehouse(storehouse);
-            }else{
-                inventoryEntity.setAmount(inventoryEntity.getAmount() + req.getInNumber());
-            }
-            inventoryRepository.save(inventoryEntity);
+            // 修改库存: 库存信息
+            inventory.setAmount(inventory.getAmount() - req.getOutNumber());
+            inventoryRepository.save(inventory);
 
-            /**
-             * 记录入库日志
-             */
-            InventoryInEntity log = new InventoryInEntity();
+            // 记录出库日志
+            InventoryOutEntity log = new InventoryOutEntity();
             // 一些可直接copy的信息
             JoyBeanUtil.copyPropertiesIgnoreSourceNullProperties(req, log);
             // 材料
             log.setMaterial(material);
             // 仓库
             log.setStorehouse(storehouse);
-            inventoryInRepository.save(log);
+            inventoryOutRepository.save(log);
         }
         return JoyResult.buildSuccessResultWithData(ResultDataConstant.MESSAGE_ADD_SUCCESS);
     }
@@ -195,28 +168,28 @@ public class InventoryInService {
      * 获取数据(id)
      */
     public JoyResult get(Long id) {
-        return JoyResult.buildSuccessResultWithData(inventoryInRepository.findAllById(id));
+        return JoyResult.buildSuccessResultWithData(inventoryOutRepository.findAllById(id));
     }
 
     /**
      * 获取分页数据
      */
-    public JoyResult getPagerList(InventoryInGetListReq req) {
-        return JoyResult.buildSuccessResultWithData(inventoryInRepository.findAll(getPredicates(req), JpaPagerUtil.getPageable(req)));
+    public JoyResult getPagerList(InventoryOutGetListReq req) {
+        return JoyResult.buildSuccessResultWithData(inventoryOutRepository.findAll(getPredicates(req), JpaPagerUtil.getPageable(req)));
     }
 
     /**
      * 获取全部
      */
-    public JoyResult getAllList(InventoryInGetListReq req) {
-        return JoyResult.buildSuccessResultWithData(inventoryInRepository.findAll(getPredicates(req)));
+    public JoyResult getAllList(InventoryOutGetListReq req) {
+        return JoyResult.buildSuccessResultWithData(inventoryOutRepository.findAll(getPredicates(req)));
     }
 
     /**
      * 获取分页数据、全部数据的谓词条件
      */
-    private Specification<InventoryInEntity> getPredicates(InventoryInGetListReq req){
-        return (Specification<InventoryInEntity>) (root, query, builder) -> {
+    private Specification<InventoryOutEntity> getPredicates(InventoryOutGetListReq req){
+        return (Specification<InventoryOutEntity>) (root, query, builder) -> {
             List<Predicate> predicates = new ArrayList<>();
             /**
              * 材料名称
@@ -231,10 +204,10 @@ public class InventoryInService {
                 predicates.add(builder.like(root.get("material").get("modelNumber"), "%" + req.getModelNumber() +"%"));
             }
             /**
-             * 签收人
+             * 领用班组
              */
-            if(!StringUtil.isEmpty(req.getSignPeople())){
-                predicates.add(builder.like(root.get("signPeople"), "%" + req.getSignPeople() +"%"));
+            if(!StringUtil.isEmpty(req.getUsedTeam())){
+                predicates.add(builder.like(root.get("usedTeam"), "%" + req.getUsedTeam() +"%"));
             }
             /**
              * 材料类别
@@ -256,28 +229,28 @@ public class InventoryInService {
                 predicates.add(builder.equal(root.get("material").get("supplier").get("id"), req.getSupplierId()));
             }
             /**
-             * 入库时间区间
+             * 出库时间区间
              */
-            if(req.getInDateStart() != null){
-                predicates.add(builder.greaterThanOrEqualTo(root.get("inDate"), req.getInDateStart()));
+            if(req.getOutDateStart() != null){
+                predicates.add(builder.greaterThanOrEqualTo(root.get("outDate"), req.getOutDateStart()));
             }
-            if(req.getInDateEnd() != null){
-                predicates.add(builder.lessThanOrEqualTo(root.get("inDate"), req.getInDateEnd()));
+            if(req.getOutDateEnd() != null){
+                predicates.add(builder.lessThanOrEqualTo(root.get("outDate"), req.getOutDateEnd()));
             }
             return builder.and(predicates.toArray(new Predicate[predicates.size()]));
         };
     }
 
 
-    public void exportData(InventoryInGetListReq req, HttpServletRequest request, HttpServletResponse response) {
+    public void exportData(InventoryOutGetListReq req, HttpServletRequest request, HttpServletResponse response) {
         // 获取查询结果
-        List<InventoryInEntity> inventoryIns = (List<InventoryInEntity>)getAllList(req).getData();
+        List<InventoryOutEntity> inventoryIns = (List<InventoryOutEntity>)getAllList(req).getData();
         // 日期导出格式
         SimpleDateFormat dateFormat = new SimpleDateFormat(ExcelConstant.DATE_FORMAT);
         List<List<String>> rows = new ArrayList<List<String>>();
-        rows.add(CollUtil.newArrayList(ExcelConstant.HEAD_INVENTORY_IN));
+        rows.add(CollUtil.newArrayList(ExcelConstant.HEAD_INVENTORY_OUT));
         for (int i = 0; i < inventoryIns.size(); i++) {
-            InventoryInEntity info = inventoryIns.get(i);
+            InventoryOutEntity info = inventoryIns.get(i);
             List<String> row = CollUtil.newArrayList(
                     // 序号（也可以使用ID?）
                     String.valueOf(i + 1),
@@ -291,22 +264,22 @@ public class InventoryInService {
                     info.getMaterial().getMaterialCategory().getName(),
                     // 库存总数（从材料对象处获得）
                     info.getMaterial().getAmount().toString(),
-                    // 入库数量
-                    info.getInNumber().toString(),
-                    // 入库仓库
+                    // 出库数量
+                    info.getOutNumber().toString(),
+                    // 出库仓库
                     info.getStorehouse().getName(),
-                    // 入库后总数
+                    // 出库后总数
                     info.getAfterAmount().toString(),
-                    // 入库时间
-                    dateFormat.format(info.getInDate()),
-                    // 签收人
-                    info.getSignPeople(),
+                    // 出库时间
+                    dateFormat.format(info.getOutDate()),
+                    // 领用班组
+                    info.getUsedTeam(),
                     // 备注
                     info.getRemarks()
             );
             rows.add(row);
         }
-        String fileName = "入库信息表";
+        String fileName = "出库信息表";
         ExcelWriter writer = ExcelUtil.getWriter();
         writer.write(rows, true);
         ExportUtil.exportData(request, response, fileName, writer);

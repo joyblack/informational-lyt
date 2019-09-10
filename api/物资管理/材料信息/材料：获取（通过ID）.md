@@ -1,7 +1,7 @@
 # 简介
 
 # 访问地址
-gm-material-category/get
+gm-storehouse/get
 
 # 请求参数
 
@@ -19,7 +19,7 @@ JSON
 ## 请求示例
 ```json
 {
-    "id": 8
+    "id": 1
 }
 ```
 
@@ -31,14 +31,16 @@ JSON
     "message": "操作成功",
     "detailMessage": "",
     "data": {
-        "id": 8,
+        "id": 1,
         "createTime": "2019-09-09",
         "updateTime": "2019-09-09",
         "remarks": null,
-        "name": "机电D-2",
-        "parentId": 6,
-        "path": "1-6-8-",
-        "children": null
+        "name": "一号仓库_change",
+        "status": "START",
+        "responsePeople": "赵义_change",
+        "code": "001-A-change",
+        "admin": "Mr.Joy-change",
+        "isDefault": "YES"
     },
     "code": 200
 }

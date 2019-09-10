@@ -2,15 +2,17 @@ package com.joy.xxfy.informationallyt.module.storehouse.web;
 
 import com.joy.xxfy.informationallyt.module.common.web.req.IdReq;
 import com.joy.xxfy.informationallyt.module.storehouse.service.InventoryInService;
+import com.joy.xxfy.informationallyt.module.storehouse.service.InventoryOutService;
 import com.joy.xxfy.informationallyt.module.storehouse.web.req.InventoryInAddReq;
 import com.joy.xxfy.informationallyt.module.storehouse.web.req.InventoryInGetListReq;
+import com.joy.xxfy.informationallyt.module.storehouse.web.req.InventoryOutAddReq;
+import com.joy.xxfy.informationallyt.module.storehouse.web.req.InventoryOutGetListReq;
 import com.joy.xxfy.informationallyt.publish.exception.JoyException;
 import com.joy.xxfy.informationallyt.publish.result.JoyResult;
 import com.joy.xxfy.informationallyt.publish.result.Notice;
 import com.joy.xxfy.informationallyt.validated.ValidList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,14 +21,13 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.util.List;
 
 @RestController
-@RequestMapping("gm-inventory-in")
-public class InventoryInController {
+@RequestMapping("gm-inventory-out")
+public class InventoryOutController {
 
     @Autowired
-    private InventoryInService inventoryInService;
+    private InventoryOutService inventoryOutService;
 
     /**
      * 添加
@@ -34,11 +35,11 @@ public class InventoryInController {
     @PostMapping(
             value = "/add",
             produces = {"application/json;charset=UTF-8"})
-    public JoyResult add(@RequestBody @Valid InventoryInAddReq req, BindingResult bindingResult) {
+    public JoyResult add(@RequestBody @Valid InventoryOutAddReq req, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            return inventoryInService.add(req);
+            return inventoryOutService.add(req);
         }
     }
 
@@ -48,11 +49,11 @@ public class InventoryInController {
     @PostMapping(
             value = "/batchAdd",
             produces = {"application/json;charset=UTF-8"})
-    public JoyResult add(@RequestBody @Valid  ValidList<InventoryInAddReq> reqs, BindingResult bindingResult) {
+    public JoyResult add(@RequestBody @Valid  ValidList<InventoryOutAddReq> reqs, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            return inventoryInService.batchAdd(reqs);
+            return inventoryOutService.batchAdd(reqs);
         }
     }
 
@@ -67,7 +68,7 @@ public class InventoryInController {
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            return inventoryInService.get(idRequest.getId());
+            return inventoryOutService.get(idRequest.getId());
         }
     }
 
@@ -79,11 +80,11 @@ public class InventoryInController {
     @RequestMapping(
             value = "getAllList",
             produces = {"application/json;charset=UTF-8"})
-    public JoyResult getAllList(@RequestBody @Valid InventoryInGetListReq req, BindingResult bindingResult) {
+    public JoyResult getAllList(@RequestBody @Valid InventoryOutGetListReq req, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            return inventoryInService.getAllList(req);
+            return inventoryOutService.getAllList(req);
         }
     }
 
@@ -93,11 +94,11 @@ public class InventoryInController {
     @RequestMapping(
             value = "getPagerList",
             produces = {"application/json;charset=UTF-8"})
-    public JoyResult getPagerList(@RequestBody @Valid InventoryInGetListReq req, BindingResult bindingResult) {
+    public JoyResult getPagerList(@RequestBody @Valid InventoryOutGetListReq req, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            return inventoryInService.getPagerList(req);
+            return inventoryOutService.getPagerList(req);
         }
     }
 
@@ -105,20 +106,20 @@ public class InventoryInController {
      * 导出查询结果的数据
      */
     @RequestMapping("exportData")
-    public void exportData(@RequestBody @Valid InventoryInGetListReq req, BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) {
+    public void exportData(@RequestBody @Valid InventoryOutGetListReq req, BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) {
         if (bindingResult.hasErrors()) {
             throw new JoyException(Notice.REQUEST_PARAMETER_IS_ERROR);
         } else {
-            inventoryInService.exportData(req, request, response);
+            inventoryOutService.exportData(req, request, response);
         }
     }
 
     @RequestMapping("exportData2")
-    public void exportData2(@Valid InventoryInGetListReq req, BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) {
+    public void exportData2(@Valid InventoryOutGetListReq req, BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) {
         if (bindingResult.hasErrors()) {
             throw new JoyException(Notice.REQUEST_PARAMETER_IS_ERROR);
         } else {
-            inventoryInService.exportData(req, request, response);
+            inventoryOutService.exportData(req, request, response);
         }
     }
 
