@@ -20,7 +20,7 @@ JSON
 ## 请求示例
 ```json
 {
-	"id": 5
+	"id": 1
 }
 ```
 
@@ -32,46 +32,47 @@ JSON
     "message": "操作成功",
     "detailMessage": "",
     "data": {
-        "id": 5,
-        "createTime": "2019-09-10",
-        "updateTime": "2019-09-10",
+        "id": 1,
+        "createTime": "2019-09-11",
+        "updateTime": "2019-09-11",
         "remarks": null,
+        "supplier": {
+            "id": 5,
+            "createTime": "2019-09-11",
+            "updateTime": "2019-09-11",
+            "remarks": "aiyo,zhangfei!!",
+            "name": "电子厂",
+            "code": "001-B",
+            "business": "出售有机塑料",
+            "contactPeople": "张飞",
+            "contactPhone": null
+        },
         "material": {
-            "id": 3,
-            "createTime": "2019-09-10",
-            "updateTime": "2019-09-10",
+            "id": 1,
+            "createTime": "2019-09-11",
+            "updateTime": "2019-09-11",
             "remarks": null,
-            "name": "咖啡",
+            "name": "啤酒",
+            "modelNumber": "001-A",
             "materialCategory": {
-                "id": 1,
-                "createTime": "2019-09-10",
-                "updateTime": "2019-09-10",
+                "id": 2,
+                "createTime": "2019-09-11",
+                "updateTime": "2019-09-11",
                 "remarks": null,
-                "name": "机电A",
+                "name": "航空航天材料",
                 "parentId": 0,
-                "path": "1-",
+                "path": "2-",
                 "children": null
             },
-            "supplier": {
-                "id": 1,
-                "createTime": "2019-09-10",
-                "updateTime": "2019-09-10",
-                "remarks": "aiyo,zhangfei!!",
-                "name": "供货商A",
-                "code": "001-A",
-                "business": "出售有机塑料",
-                "contactPeople": "张飞",
-                "contactPhone": null
-            },
-            "modelNumber": "001-A",
-            "amount": 1
+            "amount": 1500,
+            "warningAmount": null
         },
         "storehouse": {
             "id": 1,
-            "createTime": "2019-09-10",
-            "updateTime": "2019-09-10",
+            "createTime": "2019-09-11",
+            "updateTime": "2019-09-11",
             "remarks": null,
-            "name": "仓库A",
+            "name": "一号仓库",
             "status": "START",
             "responsePeople": "赵义",
             "code": "001-A",
@@ -79,7 +80,7 @@ JSON
             "isDefault": "YES"
         },
         "amount": 0,
-        "inNumber": 1,
+        "inNumber": 233,
         "afterAmount": 233,
         "inDate": "2019-09-08",
         "signPeople": "赵义"

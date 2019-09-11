@@ -65,18 +65,13 @@ public class InventoryOutService {
         if(materialCategory == null){
             return JoyResult.buildFailedResult(Notice.MATERIAL_CATEGORY_NOT_EXIST);
         }
-        // 供货商信息
-        SupplierEntity supplier = supplierRepository.findAllById(req.getSupplierId());
-        if(supplier == null){
-            return JoyResult.buildFailedResult(Notice.SUPPLIER_NOT_EXIST);
-        }
         // 仓库
         StorehouseEntity storehouse = storehouseRepository.findAllById(req.getStorehouseId());
         if(storehouse == null){
             return JoyResult.buildFailedResult(Notice.STOREHOUSE_NOT_EXIST);
         }
         // 是否存在材料信息
-        MaterialEntity material = materialRepository.findFirstByNameAndModelNumberAndSupplier(req.getName(), req.getModelNumber(), supplier);
+        MaterialEntity material = materialRepository.findFirstByNameAndModelNumber(req.getName(), req.getModelNumber());
         if(material == null){
             return JoyResult.buildFailedResult(Notice.MATERIAL_NOT_EXIST);
         }
@@ -89,8 +84,11 @@ public class InventoryOutService {
             return JoyResult.buildFailedResult(Notice.INVENTORY_AMOUNT_NOT_ENOUGH,"仓库【"+ storehouse.getName()  +"】中材料【" + material.getName() + "】库存不足，剩余: " + inventory.getAmount() + "，小于出库量: " + req.getOutNumber());
         }
 
-        // 修改材料：总数信息
-        material.setAmount(material.getAmount() - req.getOutNumber());
+        // 出库前后库存量
+        Long amount = material.getAmount();
+        Long afterAmount = material.getAmount() - req.getOutNumber();
+        // 修改材料：库存信息
+        material.setAmount(afterAmount);
         material = materialRepository.save(material);
 
         // 修改库存: 库存信息
@@ -105,6 +103,10 @@ public class InventoryOutService {
         log.setMaterial(material);
         // 仓库
         log.setStorehouse(storehouse);
+        // 库存
+        log.setAmount(amount);
+        // 出库后库存
+        log.setAfterAmount(afterAmount);
         return JoyResult.buildSuccessResultWithData(inventoryOutRepository.save(log));
     }
 
@@ -118,18 +120,13 @@ public class InventoryOutService {
             if(materialCategory == null){
                 throw new JoyException(Notice.MATERIAL_CATEGORY_NOT_EXIST);
             }
-            // 供货商信息
-            SupplierEntity supplier = supplierRepository.findAllById(req.getSupplierId());
-            if(supplier == null){
-                throw new JoyException(Notice.SUPPLIER_NOT_EXIST);
-            }
             // 仓库
             StorehouseEntity storehouse = storehouseRepository.findAllById(req.getStorehouseId());
             if(storehouse == null){
                 throw new JoyException(Notice.STOREHOUSE_NOT_EXIST);
             }
             // 是否存在材料信息
-            MaterialEntity material = materialRepository.findFirstByNameAndModelNumberAndSupplier(req.getName(), req.getModelNumber(), supplier);
+            MaterialEntity material = materialRepository.findFirstByNameAndModelNumber(req.getName(), req.getModelNumber());
             if(material == null){
                 throw new JoyException(Notice.MATERIAL_NOT_EXIST);
             }
@@ -142,8 +139,11 @@ public class InventoryOutService {
                 throw new JoyException("仓库【"+ storehouse.getName()  +"】中材料【" + material.getName() + "】库存不足，剩余: " + inventory.getAmount() + "，小于出库量: " + req.getOutNumber());
             }
 
-            // 修改材料：总数信息
-            material.setAmount(material.getAmount() - req.getOutNumber());
+            // 出库前后库存量
+            Long amount = material.getAmount();
+            Long afterAmount = material.getAmount() - req.getOutNumber();
+            // 修改材料：库存信息
+            material.setAmount(afterAmount);
             material = materialRepository.save(material);
 
             // 修改库存: 库存信息
@@ -158,6 +158,10 @@ public class InventoryOutService {
             log.setMaterial(material);
             // 仓库
             log.setStorehouse(storehouse);
+            // 库存
+            log.setAmount(amount);
+            // 出库后库存
+            log.setAfterAmount(afterAmount);
             inventoryOutRepository.save(log);
         }
         return JoyResult.buildSuccessResultWithData(ResultDataConstant.MESSAGE_ADD_SUCCESS);
@@ -221,13 +225,6 @@ public class InventoryOutService {
             if(req.getStorehouseId() != null){
                 predicates.add(builder.equal(root.get("storehouse").get("id"), req.getStorehouseId()));
             }
-
-            /**
-             * 供应商
-             */
-            if(req.getSupplierId() != null){
-                predicates.add(builder.equal(root.get("material").get("supplier").get("id"), req.getSupplierId()));
-            }
             /**
              * 出库时间区间
              */
@@ -247,29 +244,27 @@ public class InventoryOutService {
         List<InventoryOutEntity> inventoryIns = (List<InventoryOutEntity>)getAllList(req).getData();
         // 日期导出格式
         SimpleDateFormat dateFormat = new SimpleDateFormat(ExcelConstant.DATE_FORMAT);
-        List<List<String>> rows = new ArrayList<List<String>>();
+        List<List<Object>> rows = new ArrayList<>();
         rows.add(CollUtil.newArrayList(ExcelConstant.HEAD_INVENTORY_OUT));
         for (int i = 0; i < inventoryIns.size(); i++) {
             InventoryOutEntity info = inventoryIns.get(i);
-            List<String> row = CollUtil.newArrayList(
+            List<Object> row = CollUtil.newArrayList(
                     // 序号（也可以使用ID?）
-                    String.valueOf(i + 1),
+                    i + 1,
                     // 材料名称
                     info.getMaterial().getName(),
                     // 型号
                     info.getMaterial().getModelNumber(),
-                    // 供货单位/供货人
-                    info.getMaterial().getSupplier().getName(),
                     // 材料类别
                     info.getMaterial().getMaterialCategory().getName(),
                     // 库存总数（从材料对象处获得）
-                    info.getMaterial().getAmount().toString(),
+                    info.getMaterial().getAmount(),
                     // 出库数量
-                    info.getOutNumber().toString(),
+                    info.getOutNumber(),
                     // 出库仓库
                     info.getStorehouse().getName(),
                     // 出库后总数
-                    info.getAfterAmount().toString(),
+                    info.getAfterAmount(),
                     // 出库时间
                     dateFormat.format(info.getOutDate()),
                     // 领用班组

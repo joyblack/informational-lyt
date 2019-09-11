@@ -9,10 +9,10 @@ gm-inventory-out/exportData
 # 请求参数
 
 ## 请求方式
-POST
+POST/GET
 
 ## 请求格式
-JSON
+JSON/URL PARAMETER
 
 ## 请求数据
 |参数|类型|必填|简介|

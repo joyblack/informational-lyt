@@ -43,14 +43,6 @@ public class InventoryInAddReq extends BaseAddReq {
     @NotNull(message = "材料类别不能为空")
     private Long materialCategoryId;
 
-
-
-    /**
-     * 库存总数
-     */
-    @NotNull(message = "库存总数不能为空")
-    private Long amount;
-
     /**
      * 入库数量
      */
@@ -63,12 +55,6 @@ public class InventoryInAddReq extends BaseAddReq {
      */
     @NotNull(message = "入库仓库信息不能为空")
     private Long storehouseId;
-
-    /**
-     * 入库后总数
-     */
-    @NotNull(message = "入库后总数不能为空")
-    private Long afterAmount;
 
     /**
      * 入库时间

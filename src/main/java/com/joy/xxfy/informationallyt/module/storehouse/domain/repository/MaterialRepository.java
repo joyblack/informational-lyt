@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MaterialRepository extends BaseRepository<MaterialEntity>, JpaRepository<MaterialEntity, Long> {
     /**
-     * 根据唯一性约束(名称、型号、提供商)查找
+     * 根据唯一性约束(名称、型号)查找
      */
-    MaterialEntity findFirstByNameAndModelNumberAndSupplier(String name,String modelNumber, SupplierEntity supplier);
+    MaterialEntity findFirstByNameAndModelNumber(String name,String modelNumber);
 
 }

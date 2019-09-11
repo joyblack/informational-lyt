@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Data
 @ToString
-public class InventoryOutGetListReq extends BasePageReq {
+public class InventoryGetListReq extends BasePageReq {
 
     /**
      * 材料名称
@@ -27,22 +27,9 @@ public class InventoryOutGetListReq extends BasePageReq {
      */
     private Long materialCategoryId;
 
-
     /**
-     * 出库仓库ID
+     * 仓库ID
      */
     private Long storehouseId;
-
-
-    /**
-     * 出库时间区间
-     */
-    private Date outDateStart;
-    private Date outDateEnd;
-
-    /**
-     * 领用班组
-     */
-    private String usedTeam;
 
 }

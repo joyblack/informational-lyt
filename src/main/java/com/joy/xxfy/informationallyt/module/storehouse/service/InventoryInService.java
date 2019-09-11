@@ -77,7 +77,10 @@ public class InventoryInService {
          * 处理材料的总库存信息
          * 若不存在，新建材料。
          */
-        MaterialEntity material = materialRepository.findFirstByNameAndModelNumberAndSupplier(req.getName(), req.getModelNumber(), supplier);
+        // 入库前后库存量
+        Long amount = 0L;
+        Long afterAmount = req.getInNumber();
+        MaterialEntity material = materialRepository.findFirstByNameAndModelNumber(req.getName(), req.getModelNumber());
         if(material == null){
             material = new MaterialEntity();
             // 总量即为本次入库总量
@@ -85,9 +88,10 @@ public class InventoryInService {
             material.setMaterialCategory(materialCategory);
             material.setName(req.getName());
             material.setModelNumber(req.getModelNumber());
-            material.setSupplier(supplier);
         }else{
+            amount = material.getAmount();
             material.setAmount(material.getAmount() + req.getInNumber());
+            afterAmount = material.getAmount();
         }
         material = materialRepository.save(material);
 
@@ -116,6 +120,12 @@ public class InventoryInService {
         log.setMaterial(material);
         // 仓库
         log.setStorehouse(storehouse);
+        // 供货商
+        log.setSupplier(supplier);
+        // 入库前库存量
+        log.setAmount(amount);
+        // 入库后库存量
+        log.setAfterAmount(afterAmount);
         return JoyResult.buildSuccessResultWithData(inventoryInRepository.save(log));
     }
 
@@ -146,7 +156,10 @@ public class InventoryInService {
              * 处理材料的总库存信息
              * 若不存在，新建材料。
              */
-            MaterialEntity material = materialRepository.findFirstByNameAndModelNumberAndSupplier(req.getName(), req.getModelNumber(), supplier);
+            // 入库前后库存量
+            Long amount = 0L;
+            Long afterAmount = req.getInNumber();
+            MaterialEntity material = materialRepository.findFirstByNameAndModelNumber(req.getName(), req.getModelNumber());
             if(material == null){
                 material = new MaterialEntity();
                 // 总量即为本次入库总量
@@ -154,12 +167,12 @@ public class InventoryInService {
                 material.setMaterialCategory(materialCategory);
                 material.setName(req.getName());
                 material.setModelNumber(req.getModelNumber());
-                material.setSupplier(supplier);
             }else{
+                amount = material.getAmount();
                 material.setAmount(material.getAmount() + req.getInNumber());
+                afterAmount = material.getAmount();
             }
             material = materialRepository.save(material);
-
             /**
              * 修改库存信息，新增入库数量
              * 若不存在，新建库存信息
@@ -185,6 +198,12 @@ public class InventoryInService {
             log.setMaterial(material);
             // 仓库
             log.setStorehouse(storehouse);
+            // 供货商
+            log.setSupplier(supplier);
+            // 入库前库存量
+            log.setAmount(amount);
+            // 入库后库存量
+            log.setAfterAmount(afterAmount);
             inventoryInRepository.save(log);
         }
         return JoyResult.buildSuccessResultWithData(ResultDataConstant.MESSAGE_ADD_SUCCESS);
@@ -274,29 +293,29 @@ public class InventoryInService {
         List<InventoryInEntity> inventoryIns = (List<InventoryInEntity>)getAllList(req).getData();
         // 日期导出格式
         SimpleDateFormat dateFormat = new SimpleDateFormat(ExcelConstant.DATE_FORMAT);
-        List<List<String>> rows = new ArrayList<List<String>>();
+        List<List<Object>> rows = new ArrayList<>();
         rows.add(CollUtil.newArrayList(ExcelConstant.HEAD_INVENTORY_IN));
         for (int i = 0; i < inventoryIns.size(); i++) {
             InventoryInEntity info = inventoryIns.get(i);
-            List<String> row = CollUtil.newArrayList(
+            List<Object> row = CollUtil.newArrayList(
                     // 序号（也可以使用ID?）
-                    String.valueOf(i + 1),
+                    i + 1,
                     // 材料名称
                     info.getMaterial().getName(),
                     // 型号
                     info.getMaterial().getModelNumber(),
                     // 供货单位/供货人
-                    info.getMaterial().getSupplier().getName(),
+                    info.getSupplier().getName(),
                     // 材料类别
                     info.getMaterial().getMaterialCategory().getName(),
                     // 库存总数（从材料对象处获得）
-                    info.getMaterial().getAmount().toString(),
+                    info.getMaterial().getAmount(),
                     // 入库数量
                     info.getInNumber().toString(),
                     // 入库仓库
                     info.getStorehouse().getName(),
                     // 入库后总数
-                    info.getAfterAmount().toString(),
+                    info.getAfterAmount(),
                     // 入库时间
                     dateFormat.format(info.getInDate()),
                     // 签收人

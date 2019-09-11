@@ -16,7 +16,14 @@ import java.util.Date;
 @Table(name = "gm_inventory_in")
 public class InventoryInEntity extends BaseEntity {
     /**
-     * 材料信息
+     * 供货人（厂家）
+     */
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "supplier_id")
+    private SupplierEntity supplier;
+
+    /**
+     * 材料
      */
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "material_id", nullable = false)

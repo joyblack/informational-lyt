@@ -5,6 +5,7 @@ import com.joy.xxfy.informationallyt.module.safe.service.SafeInspectionService;
 import com.joy.xxfy.informationallyt.module.safe.web.req.SafeInspectionAddReq;
 import com.joy.xxfy.informationallyt.module.safe.web.req.SafeInspectionGetListReq;
 import com.joy.xxfy.informationallyt.module.safe.web.req.SafeInspectionUpdateReq;
+import com.joy.xxfy.informationallyt.publish.exception.JoyException;
 import com.joy.xxfy.informationallyt.publish.result.JoyResult;
 import com.joy.xxfy.informationallyt.publish.result.Notice;
 import com.joy.xxfy.informationallyt.validated.ValidList;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 @RestController
@@ -34,7 +37,6 @@ public class SafeInspectionController{
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            // copy
             return safeInspectionService.add(req);
         }
     }
@@ -49,7 +51,6 @@ public class SafeInspectionController{
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            // copy
             return safeInspectionService.add(reqs);
         }
     }
@@ -64,7 +65,6 @@ public class SafeInspectionController{
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            // copy
             return safeInspectionService.update(req);
         }
     }
@@ -79,7 +79,6 @@ public class SafeInspectionController{
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            // copy
             return safeInspectionService.delete(idRequest.getId());
         }
     }
@@ -94,7 +93,6 @@ public class SafeInspectionController{
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            // copy
             return safeInspectionService.get(idRequest.getId());
         }
     }
@@ -109,7 +107,6 @@ public class SafeInspectionController{
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            // copy
             return safeInspectionService.getAllList(req);
         }
     }
@@ -124,8 +121,33 @@ public class SafeInspectionController{
         if (bindingResult.hasErrors()) {
             return JoyResult.buildFailedResult(Notice.REQUEST_PARAMETER_IS_ERROR, bindingResult.getFieldError().getDefaultMessage());
         } else {
-            // copy
             return safeInspectionService.getPagerList(req);
+        }
+    }
+
+    /**
+     * 导出
+     */
+    @RequestMapping(
+            value = "exportData",
+            produces = {"application/json;charset=UTF-8"})
+    public void exportData(@RequestBody @Valid SafeInspectionGetListReq req, BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) {
+        if (bindingResult.hasErrors()) {
+            throw new JoyException(Notice.REQUEST_PARAMETER_IS_ERROR);
+        } else {
+            safeInspectionService.exportData(req, request, response);
+        }
+    }
+
+    /**
+     * 导出2
+     */
+    @RequestMapping(value = "exportData2")
+    public void exportData2(SafeInspectionGetListReq req, BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) {
+        if (bindingResult.hasErrors()) {
+            throw new JoyException(Notice.REQUEST_PARAMETER_IS_ERROR);
+        } else {
+            safeInspectionService.exportData(req, request, response);
         }
     }
 
