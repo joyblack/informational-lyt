@@ -1,13 +1,10 @@
 package com.joy.xxfy.informationallyt.module.system.service;
 
+import com.joy.xxfy.informationallyt.module.common.constant.CommonConstant;
 import com.joy.xxfy.informationallyt.module.system.domain.entity.DepartmentEntity;
-import com.joy.xxfy.informationallyt.module.system.domain.entity.UserEntity;
-import com.joy.xxfy.informationallyt.module.system.domain.enums.DepartmentTypeEnum;
-import com.joy.xxfy.informationallyt.module.system.domain.enums.UserTypeEnum;
 import com.joy.xxfy.informationallyt.module.system.domain.repository.DepartmentRepository;
 import com.joy.xxfy.informationallyt.module.system.web.req.DepartmentAddReq;
 import com.joy.xxfy.informationallyt.module.system.web.req.DepartmentUpdateReq;
-import com.joy.xxfy.informationallyt.publish.constant.DepartmentConstant;
 import com.joy.xxfy.informationallyt.publish.constant.ResultDataConstant;
 import com.joy.xxfy.informationallyt.publish.constant.SystemConstant;
 import com.joy.xxfy.informationallyt.publish.result.JoyResult;
@@ -36,11 +33,11 @@ public class DepartmentService{
     public JoyResult add(DepartmentAddReq req) {
         // check parent dept info.
         DepartmentEntity parent = departmentRepository.findAllById(req.getParentId());
-        if(!req.getParentId().equals(DepartmentConstant.COMPANY_PARENT_NODE_ID) && parent == null){
+        if(!req.getParentId().equals(CommonConstant.TOP_NODE_ID) && parent == null){
             return JoyResult.buildFailedResult(Notice.DEPARTMENT_PARENT_NOT_EXIST);
         }
         // check same name on common level.
-        DepartmentEntity checkDepartment = departmentRepository.findAllByParentIdAndName(req.getParentId(), req.getDepartmentName());
+        DepartmentEntity checkDepartment = departmentRepository.findFirstByParentIdAndName(req.getParentId(), req.getDepartmentName());
         if(checkDepartment != null){
             return JoyResult.buildFailedResult(Notice.DEPARTMENT_NAME_ALREADY_EXIST);
         }
@@ -78,11 +75,11 @@ public class DepartmentService{
         }
         // check parent dept info.
         DepartmentEntity parent = departmentRepository.findAllById(req.getParentId());
-        if(!req.getParentId().equals(DepartmentConstant.COMPANY_PARENT_NODE_ID) && parent == null){
+        if(!req.getParentId().equals(CommonConstant.TOP_NODE_ID) && parent == null){
             return JoyResult.buildFailedResult(Notice.DEPARTMENT_PARENT_NOT_EXIST);
         }
         // 检查是否有重名部门
-        DepartmentEntity checkDepartment = departmentRepository.findAllByParentIdAndNameAndIdNot(req.getParentId(), req.getDepartmentName(),req.getId());
+        DepartmentEntity checkDepartment = departmentRepository.findFirstByParentIdAndNameAndIdNot(req.getParentId(), req.getDepartmentName(),req.getId());
         if(checkDepartment != null){
             return JoyResult.buildFailedResult(Notice.DEPARTMENT_NAME_ALREADY_EXIST);
         }
@@ -154,9 +151,9 @@ public class DepartmentService{
      */
     private String getSuitPath(DepartmentEntity parent, DepartmentEntity child){
         if(parent == null){
-            return child.getId() + DepartmentConstant.DEPARTMENT_PATH_SEPARATOR;
+            return child.getId() + CommonConstant.PATH_SEPARATOR;
         }else{
-            return parent.getPath()  + child.getId() +  DepartmentConstant.DEPARTMENT_PATH_SEPARATOR;
+            return parent.getPath()  + child.getId() +  CommonConstant.PATH_SEPARATOR;
         }
     }
 

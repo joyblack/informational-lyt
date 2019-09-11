@@ -14,12 +14,12 @@ public interface DepartmentRepository extends BaseRepository<DepartmentEntity>, 
     /**
      * 根据parentId&name获取部门信息
      */
-    DepartmentEntity findAllByParentIdAndName(Long parentId, String departmentName);
+    DepartmentEntity findFirstByParentIdAndName(Long parentId, String departmentName);
 
     /**
      * 根据parentId&departmentName&!id 获取部门信息
      */
-    DepartmentEntity findAllByParentIdAndNameAndIdNot(Long parentId, String departmentName, Long id);
+    DepartmentEntity findFirstByParentIdAndNameAndIdNot(Long parentId, String departmentName, Long id);
 
     /**
      * 根据父节点ID获取子节点信息

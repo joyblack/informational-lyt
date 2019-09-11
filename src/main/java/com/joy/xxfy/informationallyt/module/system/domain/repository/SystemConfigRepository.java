@@ -8,5 +8,5 @@ public interface SystemConfigRepository extends BaseRepository<SystemConfigEntit
     /**
      * 根据配置名称获取配置信息
      */
-    SystemConfigEntity findAllByName(String name);
+    SystemConfigEntity findFirstByName(String name);
 }

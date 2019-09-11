@@ -60,7 +60,7 @@ system:
     image-format: jpg;JPG;bmp;BMP;png;PNG
   # initial config
   initial:
-    company-name: ÂÌÓ³ÌÁ¹ÜÀí
+    company-name: lyt admin platform
     super-admin-default-name: admin
     super-admin-default-password: 123456
     

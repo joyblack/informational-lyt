@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("department")
+@RequestMapping("system-department")
 public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;

@@ -3,20 +3,17 @@ package com.joy.xxfy.informationallyt.module.system.service;
 import com.joy.xxfy.informationallyt.module.common.web.req.BasePageReq;
 import com.joy.xxfy.informationallyt.module.system.domain.entity.DepartmentEntity;
 import com.joy.xxfy.informationallyt.module.system.domain.entity.UserEntity;
-import com.joy.xxfy.informationallyt.module.system.domain.enums.DepartmentTypeEnum;
-import com.joy.xxfy.informationallyt.module.system.domain.enums.UserTypeEnum;
 import com.joy.xxfy.informationallyt.module.system.domain.repository.DepartmentRepository;
 import com.joy.xxfy.informationallyt.module.system.domain.repository.UserRepository;
 import com.joy.xxfy.informationallyt.module.system.web.req.UserAddReq;
 import com.joy.xxfy.informationallyt.module.system.web.req.UserUpdateReq;
-import com.joy.xxfy.informationallyt.publish.constant.DepartmentConstant;
 import com.joy.xxfy.informationallyt.publish.constant.ResultDataConstant;
 import com.joy.xxfy.informationallyt.publish.result.JoyResult;
 import com.joy.xxfy.informationallyt.publish.result.Notice;
 import com.joy.xxfy.informationallyt.publish.utils.JoyBeanUtil;
+import com.joy.xxfy.informationallyt.publish.utils.JpaPagerUtil;
 import com.joy.xxfy.informationallyt.publish.utils.MD5Util;
 import com.joy.xxfy.informationallyt.publish.utils.StringUtil;
-import com.joy.xxfy.informationallyt.publish.utils.JpaPagerUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
@@ -54,11 +51,6 @@ public class UserService {
         if(department == null){
             return JoyResult.buildFailedResult(Notice.DEPARTMENT_NOT_EXIST);
         }
-        // 公司
-        DepartmentEntity company = getCompanyByDepartment(department);
-        if(company == null){
-            return JoyResult.buildFailedResult(Notice.COMPANY_NOT_EXIST);
-        }
 
         UserEntity user = new UserEntity();
         JoyBeanUtil.copyPropertiesIgnoreSourceNullProperties(req, user);
@@ -77,13 +69,6 @@ public class UserService {
         return JoyResult.buildSuccessResultWithData(userRepository.findById(id));
     }
 
-    /**
-     * 通过部门获取公司信息
-     */
-    public DepartmentEntity getCompanyByDepartment(DepartmentEntity departmentEntity){
-        String[] split = departmentEntity.getPath().split(DepartmentConstant.DEPARTMENT_PATH_SEPARATOR);
-        return departmentRepository.findAllById(Long.valueOf(split[0]));
-    }
 
     /**
      * update
@@ -107,11 +92,6 @@ public class UserService {
         DepartmentEntity department = departmentRepository.findAllById(req.getDepartmentId());
         if(department == null){
             return JoyResult.buildFailedResult(Notice.DEPARTMENT_NOT_EXIST);
-        }
-        // 公司
-        DepartmentEntity company = getCompanyByDepartment(department);
-        if(company == null){
-            return JoyResult.buildFailedResult(Notice.COMPANY_NOT_EXIST);
         }
 
         JoyBeanUtil.copyPropertiesIgnoreSourceNullProperties(req, info);

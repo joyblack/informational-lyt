@@ -63,7 +63,7 @@ public class UserEntity extends BaseEntity implements Serializable {
      */
     @NotNull(message = "部门信息不能为空")
     @JoinColumn(name = "department_id")
-    @ManyToOne(cascade = {},fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     private DepartmentEntity department;
 
 }

@@ -1,5 +1,6 @@
 package com.joy.xxfy.informationallyt.module.system.service;
 
+import com.joy.xxfy.informationallyt.module.common.constant.CommonConstant;
 import com.joy.xxfy.informationallyt.module.common.service.BaseService;
 import com.joy.xxfy.informationallyt.module.system.domain.constant.ResourceConstant;
 import com.joy.xxfy.informationallyt.module.system.domain.defaults.ResourceDefault;
@@ -7,7 +8,6 @@ import com.joy.xxfy.informationallyt.module.system.domain.entity.ResourceEntity;
 import com.joy.xxfy.informationallyt.module.system.domain.repository.ResourceRepository;
 import com.joy.xxfy.informationallyt.module.system.web.req.ResourceAddReq;
 import com.joy.xxfy.informationallyt.module.system.web.req.ResourceUpdateReq;
-import com.joy.xxfy.informationallyt.publish.constant.DepartmentConstant;
 import com.joy.xxfy.informationallyt.publish.constant.ResultDataConstant;
 import com.joy.xxfy.informationallyt.publish.result.JoyResult;
 import com.joy.xxfy.informationallyt.publish.result.Notice;
@@ -16,7 +16,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -32,7 +31,7 @@ public class ResourceService extends BaseService {
     public JoyResult add(ResourceAddReq req) {
         // check parent dept info.
         ResourceEntity parent = resourceRepository.findAllById(req.getParentId());
-        if(!req.getParentId().equals(DepartmentConstant.COMPANY_PARENT_NODE_ID) && parent == null){
+        if(!req.getParentId().equals(CommonConstant.TOP_NODE_ID) && parent == null){
             return JoyResult.buildFailedResult(Notice.DEPARTMENT_PARENT_NOT_EXIST);
         }
         // check same name on common level.
